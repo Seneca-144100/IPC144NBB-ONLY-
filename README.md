@@ -1,2 +1,47 @@
-# IPC144NBB
-IPC144NBB Matrial for semester 2231 for NBB section only
+# IPC144 NBB  
+
+
+## Workshop Zero
+Workshop Zero is designed to setup and prepare your computers for IPC144NBB.
+
+As a student in my class, you are to start your semester by setting up your computer with essential software installations and familiarizing yourself with GitHub so you can share your daily work with me for advice/help, collaboration and monitoring your progress. 
+
+This is done using what I call Workshop Zero; through a series of videos instructing you on how to set up your computer to code in C and use GitHub effectively for collaboration and source code management.
+
+> This workshop was designed when I was teaching the OOP244 subject but all the material in this workshop is identical to what you need in IPC144. At any point in the videos when yous see or hear "OOP244" or "OOP345", replace it wit "IPC144" :smile: This will save me lots of time to re-record all the videos just to say "IPC144" instead of "OOP244"
+ 
+Start Workshop Zero today and We will complete it together in the first lab (make sure you attend and bring your computers). 
+
+[Here are the Videos](https://www.youtube.com/playlist?list=PLxB4x6RkylouixUhNXf0MuwccLriA0DGC). The due date for [Workshop Zero](https://www.youtube.com/playlist?list=PLxB4x6RkylouixUhNXf0MuwccLriA0DGC) is Tuesday Jan 17th.
+
+https://www.youtube.com/playlist?list=PLxB4x6RkylouixUhNXf0MuwccLriA0DGC
+
+### Mac Users and Workshop Zero
+Workshop Zero is designed for windows, as you are required to learn and work with visual studio as an advanced IDE.<br />
+For Mac you must use and alternative development environment like [XCode](https://www.cs.auckland.ac.nz/~paul/C/Mac/xcode/) for you programing , and you have to do all the git commands through command line, or you need to install a Windows Virtual Machine to do your school work : (we will discuss this in detail during the first class)
+- [Install Fusion Vmware](https://www.vmware.com/ca/products/fusion/fusion-evaluation.html) Fusion is free for students; click on ["Register Lisence for Personal Use"](https://customerconnect.vmware.com/web/vmware/evalcenter?p=fusion-player-personal) 
+- [Install Windows 10 on Fusion VM](https://www.groovypost.com/howto/create-custom-virtual-machine-vmware-fusion/)
+
+## Recordings of Sessions
+
+# Office
+[![Fardad Office](images/244Office.png)](https://teams.microsoft.com/l/channel/19%3adWp8NHtKn8C43A1EsfN70Dkxi00NNSdWT5H_5RzVDI41%40thread.tacv2/General?groupId=c8867f6e-1fdd-4571-851b-6f5907940a53&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)
+
+# Fardad's Schedule
+| Period | Start-Stop  | Mon | Tue | Wed | Thu | Fri |
+|--------|-------------|:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
+| 1      | 8:00-8:50   |     |     |     |      |    |
+| 2      | 8:55-9:45   |     |     |     |      |     |
+| 3      | 9:50-10:40  |     |   OOP244 NAA <br /> Lecture: A3504   |     |     |        |
+| 4      | 10:45-11:35 |     |  OOP244 NAA <br /> Lecture: A3504  |     |    |      |
+| 5      | 11:40-12:30 |   |  IPC144 NBB <br /> Lecture: A1431A   |     |     |  OOP244 NAAL <br /> Lec/Lab: A3512  |
+| 6      | 12:35-13:25 |  OOP244 ZAA <br /> Lecture: M570   |  IPC144N BB <br /> Lecture: A1431A    |      |      |   OOP244 NAAL <br /> Lec/Lab: A3512     |
+| 7      | 13:30-14:20 |  OOP244 ZAA <br /> Lecture: M570   |     |       |  OOP244 ZAAL <br /> Lec/Lab: M664    |      |
+| 8      | 14:25-15:15 |     |       |     |  OOP244 ZAAL <br /> Lec/Lab: M664  |      |
+| 9      | 15:20-16:10 |     |   [Office](https://teams.microsoft.com/l/channel/19%3adWp8NHtKn8C43A1EsfN70Dkxi00NNSdWT5H_5RzVDI41%40thread.tacv2/General?groupId=c8867f6e-1fdd-4571-851b-6f5907940a53&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)   |     |      |    IPC144 NBB <br /> Lec/lab: A1508    |
+| 10     | 16:15-17:05 |     |  [Office](https://teams.microsoft.com/l/channel/19%3adWp8NHtKn8C43A1EsfN70Dkxi00NNSdWT5H_5RzVDI41%40thread.tacv2/General?groupId=c8867f6e-1fdd-4571-851b-6f5907940a53&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)   |    |      |   IPC144 NBB <br /> Lec/lab: A1508   |
+| 11     | 17:10-18:00 |       |     |     |      |      |
+| 12     | 18:05-18:55 |       |     |   |      |      |
+
+
+
