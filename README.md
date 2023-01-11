@@ -36,7 +36,7 @@ For Mac you must use and alternative development environment like [XCode](https:
 | 4      | 10:45-11:35 |     |  OOP244 NAA <br /> Lecture: A3504  |     |    |      |
 | 5      | 11:40-12:30 |   |  IPC144 NBB <br /> Lecture: A1431A   |     |     |  OOP244 NAAL <br /> Lec/Lab: A3512  |
 | 6      | 12:35-13:25 |  OOP244 ZAA <br /> Lecture: M570   |  IPC144N BB <br /> Lecture: A1431A    |      |      |   OOP244 NAAL <br /> Lec/Lab: A3512     |
-| 7      | 13:30-14:20 |  OOP244 ZAA <br /> Lecture: M570   |     |       |  OOP244 ZAAL <br /> Lec/Lab: M664    |      |
+| 7      | 13:30-14:20 |  OOP244 ZAA <br /> Lecture: M570   |     |       |  OOP244 ZAAL <br /> Lec/Lab: M614    |      |
 | 8      | 14:25-15:15 |     |       |     |  OOP244 ZAAL <br /> Lec/Lab: M664  |      |
 | 9      | 15:20-16:10 |     |   [Office](https://teams.microsoft.com/l/channel/19%3adWp8NHtKn8C43A1EsfN70Dkxi00NNSdWT5H_5RzVDI41%40thread.tacv2/General?groupId=c8867f6e-1fdd-4571-851b-6f5907940a53&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)   |     |      |    IPC144 NBB <br /> Lec/lab: A1508    |
 | 10     | 16:15-17:05 |     |  [Office](https://teams.microsoft.com/l/channel/19%3adWp8NHtKn8C43A1EsfN70Dkxi00NNSdWT5H_5RzVDI41%40thread.tacv2/General?groupId=c8867f6e-1fdd-4571-851b-6f5907940a53&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)   |    |      |   IPC144 NBB <br /> Lec/lab: A1508   |
