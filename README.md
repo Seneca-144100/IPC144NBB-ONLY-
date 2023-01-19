@@ -24,12 +24,13 @@ For Mac you must use and alternative development environment like [XCode](https:
 
 ## Recordings of Sessions
 - [01 Jan10, Intro](https://youtu.be/Ljptg09jLkE)
-- 2 Jan 13 recording was a mess!!!
+- 02 Jan 13 recording was a mess!!!
   - [2.1 Follow instructions](https://youtu.be/7dkyxRrWTzE)
   - [2.2 Github and git (audio is cut partially)](https://youtu.be/Ba0dy2WH5W8)
   - [2.3 Understanding Private and Public SSH Keys](https://youtu.be/NqtpAnJXl3Q)
   - [2.4 Putty terminal client and Nano](https://youtu.be/s-7vAe_eZEQ)
   - [2.5 NOT hiding file extensions](https://youtu.be/ILufutqAUHs)
+- [03 jan 17, C language, Compilers, printf, intro to functions](https://youtu.be/PeqJElhuTHA)
 
 # Office
 [![Fardad Office](images/244Office.png)](https://teams.microsoft.com/l/channel/19%3adWp8NHtKn8C43A1EsfN70Dkxi00NNSdWT5H_5RzVDI41%40thread.tacv2/General?groupId=c8867f6e-1fdd-4571-851b-6f5907940a53&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)
