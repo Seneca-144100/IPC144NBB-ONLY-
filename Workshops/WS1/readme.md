@@ -1,7 +1,7 @@
 # Workshop #1: First program
 (V0.9)
 
-In process of doing your first workshop, in the **lab** (part 1) you are to create a project using Visual Studio, Write a simple program that prints few messages. In the **DIY** (part 2) you will write a simple program that receives simple information from user and performs a task and printing the result.
+In the process of doing your first workshop, in the **lab** (part 1) you are to create a project using Visual Studio and write a simple program that prints few messages. In the **DIY** (part 2) you will write a simple program that receives simple information from a user and performs a task and printing the result.
 
 ## Learning Outcomes
 
@@ -19,7 +19,7 @@ This workshop is divided into two coding parts and one non-coding part:
 - Part 1 (**LAB**): A step-by-step guided workshop, worth 20% of the workshop's total mark
 > Please note that the part 1 section is **not to be started in your first session of the week**. You should start it on your own before the day of your lab and join the session for problem solving and submission of work. Part 1 (**LAB**) can only be submitted from a **Seneca Lab Computer** from your matrix account.
 - Part 2 (**DIY**): A Do It Yourself type of workshop that is much more open-ended and is worth 50% of the workshop's total mark.  
-- *reflection*: non-coding part, to be submitted together with *DIY* part. The reflection is worth **30%** of the whole workshop's mark. If your professor deems it insufficient you will lose 30% of your workshop mark.
+- *reflection*: non-coding part, to be submitted together with *DIY* part. The reflection is worth **30%** of the whole workshop's mark. If your professor deems it insufficient, you will lose 30% of your workshop mark.
 
 ## Due Dates
 
@@ -34,9 +34,9 @@ The Due dates depend on your section. Please choose the "-due" option of the sub
 
 ## Late penalties 
 ### Part 1 (Lab)
-There are no late penalties, your lab must be submitted from the lab computer before the end of the lab session.
+There are no late submission exceptions as your **lab** must be submitted from the lab computer before the end of the lab session.
 ### Part 2 (DIY)
-You are allowed to submit you work up to 2 days after due date with 30% penalty for each day. After that the submission will be closed and the mark will be zero.
+You are allowed to submit your work up to 2 days after the due date with 30% penalty for each day. After that, the submission will be closed and the mark will be zero.
 
 ## Citation
 
@@ -62,7 +62,7 @@ If the file contains work that is not yours (you found it online or somebody pro
 
 ### If you have helped someone with your code
 
-If you have helped someone with your code. Let them know of these regulations and in your 'reflect.txt' of part 2 (DIY), write exactly which part of your code was copied and who was the recipient of this code.<br />By doing this you will be clear of any wrongdoing if the recipient of the code does not honour these regulations.
+If you have helped someone with your code. Let them know of these regulations and in your 'reflect.txt' of part 2 (DIY), write exactly which part of your code was copied and who was the recipient of this code.<br />By doing this, you will be clear of any wrongdoing if the recipient of the code does not honour these regulations.
 
 
 
@@ -82,12 +82,12 @@ Check the output, and closely compare it with the expected output. Make sure the
 
 # LAB (20%)
 
-In this part of the workshop you will start by writing a program implemented in one file:
+In this part of the workshop, you will start by writing a program implemented in one file:
 - lab1.c  (containing three functions for printing a title, a line and your information and the `main()` function )
 
 
 
-## preparing the workshop 1 project.
+## Preparing the workshop 1 project.
 
 - Pull your IPC144-Works repository (created in workshop zero) to make sure your computer and GitHub repositories are in sync.
 - In your IPC144-Works folder (that is a cloned repository) create a new folder called `workshops`
@@ -131,10 +131,10 @@ If you are using the command line, simply create a folder called `lab` in the `w
 Create a file called lab1.c in the lab project: `IPC144-Works/workshops/ws1/lab/lab1.c`
 
 ### Visual Studio
-- Click on Solution explorer 
-- Right-click on `Source Files` and select `Add` and then `New Item`
-- In the `Visual C++` section select `C++ files` (this includes C files too)
-- In the Name section type `lab1.c`
+- Click on Solution Explorer 
+- Right-click on `Source Files`, select `Add`, and then `New Item`
+- In the `Visual C++` section, select `C++ files` (this includes C files too)
+- In the Name section, type `lab1.c`
 - Click on `Add`
  
 ### XCode Mac
@@ -161,9 +161,7 @@ Open `lab1.c` and add the following:
 
 `void title(void)`
 
-- Inside the title function code the following:
-
-    Print the following using `printf`
+- Inside the title function, use `printf` to print the following:
 
     - `IPC144 NBB`
     - TAB (\t)
@@ -172,19 +170,19 @@ Open `lab1.c` and add the following:
     - `Part 1`
     - Newline (\n) 
     
-- Add the prototype of the function `title` above the main function and call it in main. The prototype of a function is its name without a body: `void title(void);`
+- Add the prototype of the `title` function above the main function. Call the title function within main. The prototype of a function is its name without a body: `void title(void);`
 
 
 ### Compiling and running the program
 #### Visual Studio:
 
-To test and run your program using visual studio you can do one of the following two:  
+To test and run your program using Visual Studio, you can do one of the following options:  
 - Hold `<Ctrl>` key and press `[F5]`<br />
 OR
 - From the `Debug` Menu select `Start Without Debugging
 
-If there are no errors in your program you should see that the program compiles and the output will be displayed on a `Console` window. (you can hit enter in the console window to close it after execution.
-
+If there are no errors in your program, you should see that the program compiles and the output will be displayed on a `Console` window. You can hit `Enter`
+on your keyboard to close the console window after the program's execution.
 
 #### Xcode (mac)
 
@@ -204,7 +202,7 @@ Click the "play button" :arrow_forward: at the top of the left panel to compile 
 - run the compiled program as follows:<br />
   `./ws.exe<ENTER>`
 
-> The executable file in Linux does not need to have the `.exe`. We add it just to notice the file is an executable, this also prevents the file to be pushed to GitHub.
+> The executable file in Linux does not need the `.exe` extension. We add it just to show that the file is an executable. Adding the extension also prevents the file from being pushed to GitHub.
 
 ### The first step output
 The output should be EXACTLY as follows:
@@ -230,7 +228,7 @@ Create a function called `info` that returns and receives nothing (void) that pr
 - Your Seneca Email
 - Newline
 
-if you name is `Fred Soley` and your email is `fsoley@myseneca.ca` the output should be exactly as follows:
+If your name is `Fred Soley` and your email is `fsoley@myseneca.ca`, the output should be exactly as follows:
 
 ```text
 Name:
@@ -300,9 +298,9 @@ and follow the instructions.
 
 # Part 2 DIY (50%)
 
-> this part must be done after the `scanf` function is covered
+> This part must be done after the `scanf` function is covered
 
-Write a program in a file called `diy1.c` that receives three marks from a student for subjects IPC144, ULI101 and EAC150. These marks are integers from 0 to 100. After receiving the marks print the average mark of the three subjects.
+Write a program in a file called `diy1.c` that receives three marks from a student for subjects IPC144, ULI101, and EAC150. These marks are integers from 0 to 100. After receiving the marks, print the average mark of the three subjects.
 
 > Use your `info` and `line` functions from the lab section of this workshop. Also, use your `title` function from lab but make it print `Part 2 instead of Part 1`
 
@@ -339,7 +337,7 @@ You may be asked to talk about your reflection (as a presentation) in class.
 ### Data Entry
 ```text
 77
-66
+55
 82
 ```
 ### Files to Submit
