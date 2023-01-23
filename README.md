@@ -31,6 +31,7 @@ For Mac you must use and alternative development environment like [XCode](https:
   - [2.4 Putty terminal client and Nano](https://youtu.be/s-7vAe_eZEQ)
   - [2.5 NOT hiding file extensions](https://youtu.be/ILufutqAUHs)
 - [03 jan 17, C language, Compilers, printf, intro to functions](https://youtu.be/PeqJElhuTHA)
+- [04 jan 20, scanf](https://youtu.be/WoEq8qcXv2g)
 
 # Office
 [![Fardad Office](images/244Office.png)](https://teams.microsoft.com/l/channel/19%3adWp8NHtKn8C43A1EsfN70Dkxi00NNSdWT5H_5RzVDI41%40thread.tacv2/General?groupId=c8867f6e-1fdd-4571-851b-6f5907940a53&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)
