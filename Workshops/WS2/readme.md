@@ -90,7 +90,7 @@ shopping.c
 - main.c  (containing the `main` function and the prototype of other functions)
 - shopping.c (containing the functions `line` and `shoppingStats` )
 
-After completing your program (**The Money Spending Program**) should ask the user for the number of items they have purchased. Then it should ask for the price of each item. While doing so, it should accumulate the price of the items in a variable. When data entry is done, the program should tell the user what was the total money they spend on average for the price of an item.
+After completing your program (**The Money Spending Program**) should ask the user for the number of items they have purchased. Then it should ask for the price of each item. While doing so, it should accumulate the price of the items in a variable. When data entry is done, the program should tell the user what was the total money they spend and what was the average price for an item.
 
 Here is a sample of the expected execution:
 
