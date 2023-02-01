@@ -1,16 +1,16 @@
 # Workshop #2: Repetition, Expressions, Functions with arguments
 (V1.0)
 
-In the process of doing your second workshop, in the **lab** (part 1) you are to create a `Money Spending Calculator` program coded in two source files. In the **DIY** (part 2) you will write a program that draws rectangles with a custom border and fill settings.
+For your second workshop, the **lab** (part 1) will involve creating a `Money Spending Calculator` program that is coded in two source files. In the **DIY** (part 2), you will write a program that draws rectangles with a custom border and fill settings.
 
 ## Learning Outcomes
 
 Upon successful completion of this workshop, you will have demonstrated the abilities to:
-- create C program in multiple files
-- organize source code into functions and files
-- compile and link programs in different platforms.
-- Use expressions and loops in functions with arguments
-- describe to your instructor what you have learned in completing this workshop.
+- Create a C program with multiple files
+- Organize source code into functions and files
+- Compile and link programs on different platforms
+- Use expressions and loops in functions that have arguments
+- Describe to your instructor what you have learned in completing this workshop
 
 ## Submission Policy
 
@@ -90,7 +90,7 @@ shopping.c
 - main.c  (containing the `main` function and the prototype of other functions)
 - shopping.c (containing the functions `line` and `shoppingStats` )
 
-After completing your program (**The Money Spending Program**) should ask the user for the number of items they have purchased. Then it should ask for the price of each item. While doing so, it should accumulate the price of the items in a variable. When data entry is done, the program should tell the user what was the total money they spend and what was the average price for an item.
+(**The Money Spending Calculator**) should ask the user for the number of items they have purchased. Then, the program will ask for the price of each item. While doing so, it should accumulate the price of the items in a variable. After entering the price of each item, the program will tell the user the total money they spent and the average price of each item.
 
 Here is a sample of the expected execution:
 
@@ -123,16 +123,18 @@ The values entered by the user in this example are:
 
 ## Coding
 ### the `line` function
-As it is shown in the execution sample a line can be in different sizes and drawn using different characters the line function should accept two arguments to provide those flexibilities; one argument for the character to draw the line with and another for the size (of the number of characters) of the line.
+As shown in the execution sample, the different lines you display can have different sizes and use different characters. Design your function to accept two arguments: one argument for the character that will be used throughout the entire line (e.g., = - #) and another argument for the size of the line (i.e., the number of characters in that line).
 ```C
 // fill: the character to draw the line with.
-// length number of characters to print.
+// length: the number of characters to print.
 void line(char fill, int length);
 ```
 
 Start by creating a tester program for the function `line` even before implementing it:
 
-In `main.c` include the standard input/output header file and add the prototype of the function `line`. Then write the  main function and call the `line` in different ways, for example
+In `main.c` include the standard input/output header file and add the prototype of the function `line`. Then, write the main function and call the `line` in different ways.
+
+For example:
 
 ```c
 int main(void){
@@ -152,12 +154,12 @@ gcc filename.c -c<ENTER>
 ```
 
 ### Coding the `line` function
-In `shopping.c` file create the line function and code it using the latest topics you learnt as follows:
+In `shopping.c` file create the line function and code it using the latest topics you learned as follows:
 
 - Create the function complete with its name and body
-- Inside the body of the function write a loop that starts from zero and goes up to the value of the argument `length`. (a loop that repeats `length` times)
-- In the body of the loop print the character argument `fill` once.
-- After the body of the loop print a new line. 
+- Inside the body of the function, write a loop that starts from zero and goes up to the value of the argument `length`. (a loop that repeats `length` number of times)
+- In the body of the loop, print the character argument `fill` once.
+- After the body of the loop, print a new line. 
 
 Test the function by compiling (building) the whole project or using the command line as follows:
 
@@ -200,7 +202,7 @@ In `main` function:
 - done! (return 0)
 
 ### the `shoppingStats` function
-To test the main program add the `shoppingStats` function to the `shpping.c` file. For now, just create the function with an empty body. (don't code anything in it).
+To test the main program add the `shoppingStats` function to the `shopping.c` file. For now, just create the function with an empty body. (don't code anything in it).
 
 Now the function actually exists, but since its body is empty, it will do nothing. 
 
