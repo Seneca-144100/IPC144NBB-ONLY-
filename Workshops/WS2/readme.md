@@ -1,7 +1,7 @@
 # Workshop #2: Repetition, Expressions, Functions with arguments
-(V0.9)
+(V1.0)
 
-In the process of doing your first workshop, in the **lab** (part 1) you are to create a `Money Spending Calculator` program coded in two source files. In the **DIY** (part 2) you will write a program that draws rectangles with a custom border and fill settings.
+In the process of doing your second workshop, in the **lab** (part 1) you are to create a `Money Spending Calculator` program coded in two source files. In the **DIY** (part 2) you will write a program that draws rectangles with a custom border and fill settings.
 
 ## Learning Outcomes
 
