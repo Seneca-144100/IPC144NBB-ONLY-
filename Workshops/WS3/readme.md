@@ -1,7 +1,7 @@
 # Workshop #3: LOGIC <br />Loops, If, Else if, Validation, Functions with return statement
 
 - (V0.5) early release (submission is not open yet and the text is not proof read)
-- (v0.6) corrected function the name `getNoOfStudents`
+- (V0.6) corrected the function name `getNoOfStudents`
 
 In the process of doing your workshop 3, in the **lab** (part 1) you are to create a `Class Test Mark Report` program coded in two source files. In the **DIY** (part 2) you will write a series of foolproof I/O functions in a file called `utils.c` that will be used throughout the semester in all your workshops and assignments.
 
