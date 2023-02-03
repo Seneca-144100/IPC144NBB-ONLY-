@@ -2,6 +2,7 @@
 
 - (V0.5) early release (submission is not open yet and the text is not proof read)
 - (V0.6) corrected the function name `getNoOfStudents`
+- (V0.7) added/removed some instructions for the lab
 
 In the process of doing your workshop 3, in the **lab** (part 1) you are to create a `Class Test Mark Report` program coded in two source files. In the **DIY** (part 2) you will write a series of foolproof I/O functions in a file called `utils.c` that will be used throughout the semester in all your workshops and assignments.
 
@@ -92,9 +93,9 @@ main.c
 marks.c
 ```
 - main.c  (Already implemented, containing the `main` function and the prototype of other functions)
-- marks.c (containing the functions `getNoOfStudents`, `getAverage`, `printReport` and `prnGrade` )
+- marks.c (Which will contain your function definitions for: `getNoOfStudents`, `getAverage`, `printReport` and `prnGrade` )
 
-After completion, your program will calculate the average of all the marks received by the students in a test and prints a report stating what the average mark of the whole class is and what the grade equivalent for the mark is, using the following table:
+After completion, your program will calculate the average of all the marks received by the students in a test and prints a report stating what the average mark of the whole class is and what the letter grade equivalent for the mark is, using the following table:
 
 | Mark     | Grade |
 |----------|-------|
@@ -111,10 +112,11 @@ After completion, your program will calculate the average of all the marks recei
 
 ## Main logic
 
-- We will start with a title and a prompt for the user to enter the number of the students in class
-- using the `getNoOfStudents` function we will receive the number of students from the user and return it to the main program
-- Then we will pass the number of the students to the `getAverage` function. This function will then get the marks of all the students (validating each number to be between 0 and 100) and calculate the average of the whole class. In the end, the function will return the average to the main program.
-- Finally, the main program will pass the number of the students and their class's average to the printReport function. The print report function will then display a report, showing the number of students, and their average and will print the letter grade equivalent of the mark by passing it to the `prnGrade` function.
+- We will start with printing a title of our program
+- Then we will call the `getNoOfStudents` function, which starts by prompting the user to enter the number of the students in the class. This function will return the value read back to the main program.
+- We will use the number returned by `getNoOfStudents`, and pass it to the `getAverage` function.
+- `getAverage` will print a message to enter students marks and then will proceed to obtain the marks of all the students (the function must ensure the user enters a number between 0 and 100 for each mark). After obtaining the user's values, calculate the average of the whole class. In the end, the function will return the average to the main program.
+- Finally, the main program will pass the number of the students and their class's average to the printReport function. The print report function will then display a report, showing the number of students, and their average and will print the letter grade equivalent (see table above for number to letter grade conversion) of the mark by passing it to the `prnGrade` function.
 
 Here is what the main looks like:
 
@@ -155,7 +157,8 @@ int main(void) {
 ## Coding
 ### Step 1
 - Create the project for the lab and add [the two files](#lab-files). 
-- write a main function to only test the `prnGrade` function that is not used in the main logic. Complete the `prnGrade` first and then continue coding the rest of the functions 
+- write a main function to only test the `prnGrade` function that is not used in the main logic. Complete the `prnGrade` first and then continue coding the rest of the functions.
+  A reminder that the end goal of prnGrade is to take a numerical grade and then display the letter grade equivalent of that numerical grade. 
     ```C
     // tester for prnGrade function
     #define _CRT_SECURE_NO_WARNINGS
@@ -171,22 +174,29 @@ int main(void) {
     ```
 
     #### coding `prnGrade`
-    - create the function prnGrade in marks.c. ```void prnGrade(int mark)```
-    - make the function only print the mark first. Compile and run the program to make sure the function call, syntax and the main function are good to go for coding.
-    - continue by creating an `if/else if` structure to print the letter grades based on the value of the mark 
-       - if the mark is below 50, print `F` (don't go to the new line)
+    - To try and code `prnGrade`, follow the step-by-step process outlined below:
+    - Start by coding the function definition of prnGrade in marks.c. ```void prnGrade(int mark)```
+    - Make the function only print the NUMERICAL mark first. Compile and run the program to make sure the function call, syntax and the main function are good to go for coding.
+      (If you pass this step, then you can proceed with revising your code to display the LETTER grade).
+    - Depending on the mark passed to `prnGrade`, you will need to print different letter grades.
+    - Continue by creating an `if/else if` structure to print the letter grades based on the value of the mark 
+       - if the mark is below 50, print `F` 
        - else if the mark is below 55, print `D`
        - else if the mark is below 60, print `D+`
        - else if the mark is below 65, print `C`
        - etc...
+    - When printing each letter, do not go to a new line
     > note that validation is not needed since we assume the mark passed to this function IS a value between 0 and 100
     
     - recompile and rerun the function many times with different values making sure it works accurately
-    - Save your `main.c` under another name (for example `prnGradeTester.c`) for possible future use
+    - Save the tester program YOU made, `main.c` under a different name (for example `prnGradeTester.c`) for possible future use
 ### Step 2
         
-- copy the main logic into `main.c` commenting all the function calls except `getNoOfStudents`.
-- add a print statement to print the return value of the function for testing.
+- Copy the FULL main program's logic into `main.c` (i.e., the first code snippet)
+- We will focus on coding `getNoOfStudents` as it is the first function called in our main program
+- As such, temporarily comment out all of the function calls in the main program BELOW the getNoOfStudents(); function call
+- For YOUR testing purposes (not for the end result of getNoOfStudents) add a print statement that displays the value that was returned from your function call.
+  This will help you in debugging your code.
 
     #### coding `getNoOfStudents` 
     - add the function to `marks.c` file: ```int getNoOfStudents(void)```
@@ -199,29 +209,31 @@ int main(void) {
     - remove the added print statement (the one you added earlier to test the returned value)
 
 ### Step 3
-- un-comment the `getAverage` function call
-- add a print statement to print the return value of the function for testing<br />
+- Now that you've coded getNoOfStudents, un-comment the `getAverage` function call
+- Like in the last step, add a print statement to print the return value of your function call<br />
 *In this function we are going to get marks for all students in a loop, then add the mark to a (sum) variable to calculate the average later, and add one to the loop counter to stop when the number of students has fulfilled. But each time we get the mark, we will make sure the mark is between 0 and 100 and only then will we add the value to the sum and increase the counter, otherwise we'll just print an error; requesting for correction.* 
 
     #### coding `getAverage`
     - add the function to `marks.c` file: ```int getAverage(int NumberOfStudents)```
-    - create local integer variables for counter(for the loop), mark(to be scanned) and sum(for average calculation)
+    - create the following local integer variables: counter(for the loop), mark(to be scanned) and sum(for average calculation)
     - prompt the user to enter the marks for the students:<br />`"Enter ## student marks...\n"` (replace **##** with the number of students)
-    - while the counter is less than the number of students
+    - while the counter is less than the number of students (do not use a do-while and for-loop)
        - print a prompt for mark entry with row number: `"##> "` (replace **##** with row number)
        - scan the mark
        - if the mark is below 0 print `"Invalid Mark, values should be greater than or equal 0.\n"`
        - else if the mark is above 100 print `"Invalid Mark, values should be less than or equal to 100.\n"`
        - else add one to the loop counter and add the mark to the sum
     - after the loop is done return `the division of sum by the number of students` as average
-    - recompile and rerun your function making sure it works correctly 
+    - recompile and rerun your function making sure it works correctly
+    - if all works as expected, remove the the print statement that displayed the value returned by your getAverage function call 
     
 ### Step 4
 - un-comment all the code to test the last function `printReport`
     
     #### coding `printReport`
     - add the function to `marks.c` file: `void printReport(int NumberOfStudents, int average)`
-    - print a message with the number of students, their average and the grade (using `prnGrade` function) as follows:
+    - print a message with the number of students and their numerical class average
+    - print the letter grade (using `prnGrade` function) as follows:
     ```Text
     Number of students: AA 
     Class average: BB% (G)  
