@@ -3,6 +3,7 @@
 - (V0.5) early release (submission is not open yet and the text is not proof read)
 - (V0.6) corrected the function name `getNoOfStudents`
 - (V0.7) added/removed some instructions for the lab
+- (V0.8) corrected Integer messages for Double functions
 
 In the process of doing your workshop 3, in the **lab** (part 1) you are to create a `Class Test Mark Report` program coded in two source files. In the **DIY** (part 2) you will write a series of foolproof I/O functions in a file called `utils.c` that will be used throughout the semester in all your workshops and assignments.
 
@@ -289,7 +290,7 @@ Then, run the following command from your matrix account
 
 and follow the instructions.
 
-> **⚠️Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
+> **??Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
 
 # Part 2 DIY (50%)
 
@@ -342,9 +343,9 @@ abc
 This function will receive a double form the console, making sure only a double is entered; 
 ### execution sample
 ```text
-Enter an integer value: abc
-Invalid Integer, try again: 10.1abc
-Enter only an integer, try again: 10.1
+Enter a Double value: abc
+Invalid Double, try again: 10.1abc
+Enter only a Double, try again: 10.1
 ```
 ### Data Entry
 ```text
@@ -356,9 +357,9 @@ abc
 This function will receive a double form the console, making sure only a double is entered and the value  is within the min and max limits
 ### execution sample `etDoubleMM(double min, double max)`
 ```text
-Enter an integer value between 10.1 and 20.1 inclusive: abc
-Invalid Integer, try again: 10.1abc
-Enter only an integer, try again: 10
+Enter a Double value between 10.1 and 20.1 inclusive: abc
+Invalid Double, try again: 10.1abc
+Enter only a Double, try again: 10
 [10.100<=Number<=20.100], try again: 20.2
 [10.100<=Number<=20.100], try again: 15.1
 ```
@@ -460,5 +461,5 @@ Then, run the following command from your matrix account
 and follow the instructions.
 
 
-> **⚠️Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
+> **??Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
 
