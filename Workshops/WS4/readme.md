@@ -181,13 +181,16 @@ If the SKU is not found in the list `Invalid Selection!` is printed instead and 
 
 #### Step 1
 Create the function in `rental.c` and add the prototype to `rental.h`.
-Add a double variable for the price and initialize it to `0.0`. 
 
 #### Step 2
+Add a double variable for the price and initialize it to `0.0`. 
+
+#### Step 3
 In a switch statement based on the value of the argument, SKU jump to the case statement with the values of the SKU listed above. In each case set the price value to the listed price above and print the name and the price of the equipment in the shown format and go to a new line.
 
 If the SKU is not found in the cases listed, by `default` print the `Invalid Selection!` error message and go to newline.
-#### Step 3
+
+#### Step 4
 Return the price value.
 
 ### `void rental(void)`
