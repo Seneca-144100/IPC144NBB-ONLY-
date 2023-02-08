@@ -9,34 +9,33 @@ char getSingleChar(void) {
 int getInt(void) {
    int value;
    int done = 0;
-   while (!done) {
-      if (scanf("%d", &value) == 1) {
+   while(!done) {
+      if(scanf("%d", &value) == 1) {
          done = 1;
-      }
-      else { // user enterd non integer
+      } else { // user enterd non integer
          flushKey();
          printf("Invalid Integer, try again: ");
       }
    }
+   flushKey();
    return value;
 }
 
 void flushKey(void) {
    char ch = 'x';
-   while (ch != '\n') {
+   while(ch != '\n') {
       ch = getchar();
    }
 }
 
 int yes(void) {
    int res;
-   char rep;
+   char resp;
    printf("(Y)es or (N)o: ");
-   rep = getSingleChar();
-   if (rep == 'Y' || rep == 'y') {
+   resp = getSingleChar();
+   if(resp == 'Y' || resp == 'y') {
       res = 1;
-   }
-   else {
+   } else {
       res = 0;
    }
    return res;
