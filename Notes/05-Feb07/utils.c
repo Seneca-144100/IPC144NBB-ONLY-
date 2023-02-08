@@ -1,19 +1,12 @@
-/*
-write a fool proof integer entry
-*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-int getInt();
-void flushKey();
-int main(void) {
-   int num;
-   printf("Enter an ineger: ");
-   num = getInt();
-   printf("you entered: %d\n", num);
-   return 0;
+#include "utils.h"
+char getSingleChar(void) {
+   char ch = getchar();
+   flushKey();
+   return ch;
 }
-
-int getInt() {
+int getInt(void) {
    int value;
    int done = 0;
    while (!done) {
@@ -28,9 +21,23 @@ int getInt() {
    return value;
 }
 
-void flushKey() {
+void flushKey(void) {
    char ch = 'x';
    while (ch != '\n') {
       ch = getchar();
    }
+}
+
+int yes(void) {
+   int res;
+   char rep;
+   printf("(Y)es or (N)o: ");
+   rep = getSingleChar();
+   if (rep == 'Y' || rep == 'y') {
+      res = 1;
+   }
+   else {
+      res = 0;
+   }
+   return res;
 }
