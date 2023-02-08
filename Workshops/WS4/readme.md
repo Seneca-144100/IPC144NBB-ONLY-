@@ -100,7 +100,7 @@ Your Ski rental program provides the following ski renal pieces of equipment:
 
 
 | Equipment     | Price | SKU |
-|----------|-------|
+|----------|-------|------|
 | Skis | 12.30    | 101 |
 | Boots | 10.45    | 102 |
 | Poles | 2.99    | 203 |
