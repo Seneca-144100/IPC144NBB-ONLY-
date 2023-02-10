@@ -1,8 +1,9 @@
 # Workshop #4: LOGIC <br />Loops, Switch Functions with return statement and simple header files
 
 Version 0.5: Only lab posted with no active submission scripts.
+Version 0.6: Added clarifications
 
-In the process of doing your workshop 3, in the **lab** (part 1) you are to create a `Ski Equipment Rental` program coded `rentals.c` and `rental.h` and reuse functions in the `utils` module `.c and .h files` developed by your professor in class. **DIY** (part 2) Will be added later
+In the process of doing your workshop 4, in the **lab** (part 1) you are to create a `Ski Equipment Rental` program. You will code `rental.c` and `rental.h` and reuse functions in the `utils` module `utils.c and utils.h files` developed by your professor in class. **DIY** (part 2) Will be added later
 
 ## Learning Outcomes
 
@@ -11,7 +12,7 @@ Upon successful completion of this workshop, you will have demonstrated the abil
 - Use simple header files
 - Perform foolproof numerical data entry
 - Reuse functions written in previous workshops (utils module)
-- describe to your instructor what you have learned in completing this workshop.
+- Describe to your instructor what you have learned in completing this workshop.
 
 ## Submission Policy
 
@@ -87,7 +88,7 @@ Check the output, and closely compare it with the expected output. Make sure the
 ## Lab files
 In this part of the workshop, you will start by writing a program implemented in a file called `rental.c`:
 
-Your **rental** module (`.c and .h`) will hold the following functions:  
+Your **rental** module (`rental.c and rental.h`) will hold the following functions:  
 
 ```C
 void menu(void);
@@ -96,7 +97,7 @@ double rent(int sku);
 ```
 
 
-Your Ski rental program provides the following ski renal pieces of equipment:
+Your Ski rental program provides the following ski rental pieces of equipment:
 
 
 | Equipment     | Price | SKU |
@@ -153,7 +154,7 @@ Before starting to code, in `rental.c` include the `rental.h` custom header file
 
 ### `void menu(void)`
 
-Add the prototype to `rental.h` and then create the menu function in `rental.c` to print the following menu:  
+Add the prototype above to `rental.h` and then create the menu function in `rental.c` to print the following menu:  
 
 ```text
 Equipment     Price      SKU
@@ -170,14 +171,14 @@ Winter Jacket 20.55      306
 
 ### `double rent(int sku)`
 
-This function will receive an SKU number and based on the SKU received will print the equipment name and its rental price and return the rental price of the item. 
+This function receives an SKU number. Based on the SKU received, it will print the equipment name and its rental price then proceed to return the rental price of the item. 
 
 Here is the format of the printout:
 ```text
 Equiment name .... 99.99$
 ```
 
-If the SKU is not found in the list `Invalid Selection!` is printed instead and `0.0` is returned.
+If the SKU is not found in the list, `Invalid Selection!` is printed and `0.0` is returned.
 
 #### Step 1
 Create the function in `rental.c` and add the prototype to `rental.h`.
@@ -186,9 +187,9 @@ Create the function in `rental.c` and add the prototype to `rental.h`.
 Add a double variable for the price and initialize it to `0.0`. 
 
 #### Step 3
-In a switch statement based on the value of the argument, SKU jump to the case statement with the values of the SKU listed above. In each case set the price value to the listed price above and print the name and the price of the equipment in the shown format and go to a new line.
+Create a switch statement based on the value of the SKU argument. You need to have an appropriate case statement for each SKU listed above. In each case statement, set the price's value to the listed price above, then proceed to print the name and the price of the equipment in the shown format and go to a new line.
 
-If the SKU is not found in the cases listed, by `default` print the `Invalid Selection!` error message and go to newline.
+If the SKU is not found in the cases listed, your `default` case should print the `Invalid Selection!` error message and go to new line.
 
 #### Step 4
 Return the price value.
