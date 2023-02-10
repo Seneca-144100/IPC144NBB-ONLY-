@@ -3,6 +3,7 @@
 - Version 0.5: Only lab posted with no active submission scripts.
 - Version 0.6: Added clarifications
 - Version 0.7: Submsssion for lab is now open
+- Version 0.8: Output Corrected
 
 In the process of doing your workshop 4, in the **lab** (part 1) you are to create a `Ski Equipment Rental` program. You will code `rental.c` and `rental.h` and reuse functions in the `utils` module `utils.c and utils.h files` developed by your professor in class. **DIY** (part 2) Will be added later
 
@@ -260,7 +261,7 @@ Enter Sku or 0 to exit: 0
 ----------------------------
 Total price:       47.29
 Tax:                6.15
-Total + Tax:       61.48$
+Total + Tax:       53.44$
 ****************************
 Exit Program? (Y)es or (N)o: y
 
