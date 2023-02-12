@@ -5,6 +5,7 @@
 - Version 0.7: Submission for lab is now open
 - Version 0.8: Output Corrected
 - Version 0.9: DIY posted and submission open 
+- Version 1.0: Updated DIY instructions and fixed main.c's print statement
 
 In the process of doing your workshop 4, in the **lab** (part 1) you are to create a `Ski Equipment Rental` program. You will code `rental.c` and `rental.h` and reuse functions in the `utils` module `utils.c and utils.h files` developed by your professor in class. **DIY** (part 2) Will be added later
 
@@ -178,7 +179,7 @@ This function receives an SKU number. Based on the SKU received, it will print t
 
 Here is the format of the printout:
 ```text
-Equiment name .... 99.99$
+Equipment name .... 99.99$
 ```
 
 If the SKU is not found in the list, `Invalid Selection!` is printed and `0.0` is returned.
@@ -311,9 +312,9 @@ and follow the instructions.
 ## My Simple Calculator
 
 ### `int calc()`
-For the DIY section of the workshop, in files 'calc.c' and 'calc.h', write a command line Calculator function called 'calc' which prompts the user with `> ` and receives a single calculation command and then prints the result (underlined with dashes '-') or an error message if a bad command is entered. In these cases, the `calc` function flushes the keyboard and then returns true.
+For the DIY section of the workshop, you are responsible for coding: 'calc.c' and 'calc.h'. These files will contain the logic for a function that you code called `calc`. `calc` starts by prompting the user with the following indicator: `> ` to enter a single calculation command. Based on the calculation command entered by the user, calc will print the result of the calculation command (underlined with dashes '-') OR an error message if a bad command is entered. In both of these cases, the `calc` function flushes the keyboard and then returns true.
 
-If instead of a command the key `<Enter>` is pressed the function just returns false.
+If instead of a command the key `<Enter>` is pressed the function, just returns false.
 
 ### Command Entry Format
 The function will receive the calculation command in the following format:  
@@ -338,11 +339,11 @@ num2: doubles values for +, -, x,/ (non zero for /)
 
 ### Result printing format
 
-For all cases, the result is printed as double with three digits after the decimal point, except the "Modulus" operation in which case the result is printed as an integer
+For all cases, the result is printed as a double with three digits after the decimal point. Only when the user enters a "Modulus" calculation using the modulus operator ('%') should the result be printed as an integer
 
-### Implementation ristrictions
+### Implementation restrictions
 
-In your implementation of the `calc` function, you must use a switch statement to select the correct operation for the operator read. 
+In your implementation of the `calc` function, if the user enters a valid query command, you must use a switch statement to do the right calculation/operation based on the operator that is read. 
 
 ### Error handling
 
@@ -356,7 +357,7 @@ If the operator is not recognized the following error message will be printed:
 ```text
 '@' is not a valid operation, (only +,-,/,x,% and ^ are acceptable
 ```
-(the `@` will be replaced with the invalid operator character read)
+(the `@` will be replaced with the invalid operator character that the user entered)
 
 
 ## A Tester program
@@ -415,8 +416,6 @@ Invalid Command!
 Goodbye!
 
 ```
-### Video
-[DIY Explained](https://www.youtube.com/watch?v=DmLqY60b-EM&ab_channel=FardadSoleimanloo)
 
 ## Reflection (30%)
 
@@ -451,7 +450,7 @@ abc
 main.c
 calc.h
 calc.c
-utils.h  // for flusing keyboard and other possible utility functions (already provided)
+utils.h  // for flushing keyboard and other possible utility functions (already provided)
 utils.c
 ```
 

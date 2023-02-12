@@ -20,7 +20,7 @@
 int main(void) {
    printf("My Simple Calculator\n"
           "-------------------------\n"
-          "Available operatrions:\n"
+          "Available operations:\n"
           "Addition:       +\n"
           "Subtraction:    -\n"
           "Multiplication: x\n"
