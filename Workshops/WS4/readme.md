@@ -2,8 +2,9 @@
 
 - Version 0.5: Only lab posted with no active submission scripts.
 - Version 0.6: Added clarifications
-- Version 0.7: Submsssion for lab is now open
+- Version 0.7: Submission for lab is now open
 - Version 0.8: Output Corrected
+- Version 0.9: DIY posted and submission open 
 
 In the process of doing your workshop 4, in the **lab** (part 1) you are to create a `Ski Equipment Rental` program. You will code `rental.c` and `rental.h` and reuse functions in the `utils` module `utils.c and utils.h files` developed by your professor in class. **DIY** (part 2) Will be added later
 
@@ -304,10 +305,116 @@ and follow the instructions.
 
 > **??Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
 
+
 # Part 2 DIY (50%)
 
-TBA
+## My Simple Calculator
 
+### `int calc()`
+For the DIY section of the workshop, in files 'calc.c' and 'calc.h', write a command line Calculator function called 'calc' which prompts the user with `> ` and receives a single calculation command and then prints the result (underlined with dashes '-') or an error message if a bad command is entered. In these cases, the `calc` function flushes the keyboard and then returns true.
+
+If instead of a command the key `<Enter>` is pressed the function just returns false.
+
+### Command Entry Format
+The function will receive the calculation command in the following format:  
+
+```text
+> ?num1@num2<ENTER>
+
+?: All calculation commands start with a '?' (question mark)
+num1: the first number
+@: the operation, one of: +, -, x, /, ^ and %, explained below
+num2: second number
+<ENTER>: enter key is pressed
+
+Specifications:
+mum1: Numbers are doubles for +, -, x, / and ^
+    : integer for % (read as double, cast to long)
+@: Addition(+), Subtraction(-), Multiplication(x), Division(/), Exponentiation(^) and Modulus(%)
+num2: doubles values for +, -, x,/ (non zero for /)
+    : integers for % and ^ (read as double, cast to long)
+    
+```
+
+### Result printing format
+
+For all cases, the result is printed as double with three digits after the decimal point, except the "Modulus" operation in which case the result is printed as an integer
+
+### Implementation ristrictions
+
+In your implementation of the `calc` function, you must use a switch statement to select the correct operation for the operator read. 
+
+### Error handling
+
+If in any case, the command does not start with a `?` or `\n` or the three parts of the command (2 numbers and an operator) are not read successfully print the following error message:
+```text
+Invalid Command!
+[Question mark][First Number][Operation][Second Number]<ENTER>
+```
+
+If the operator is not recognized the following error message will be printed:
+```text
+'@' is not a valid operation, (only +,-,/,x,% and ^ are acceptable
+```
+(the `@` will be replaced with the invalid operator character read)
+
+
+## A Tester program
+
+The main function will have the 'calc' function in a loop as long as it returns true: 
+
+```C++
+#include <stdio.h>
+#include "calc.h"
+int main(void) {
+   printf("My Simple Calculator\n"
+          "-------------------------\n");
+   while(calc());
+   printf("Goodbye!\n");
+   return 0;
+}
+
+```
+
+> Note: the submission main tester program may be different
+
+## Sample execution
+
+```text
+My Simple Calculator
+-------------------------
+> abc
+Invalid Command!
+[Question mark][First Number][Operation][Second Number]<ENTER>
+> ?2.2#1.1
+'#' is not a valid operation, (only +,-,/,x,% and ^ are acceptable)
+> ?2.2+1.1
+3.300
+-----
+> ?2.2-1.1
+1.100
+-----
+> ?2.2/1.1
+2.000
+-----
+> ?2.2*1.1
+'*' is not a valid operation, (only +,-,/,x,% and ^ are acceptable)
+> ?2.2x1.1
+2.420
+-----
+> ?2.2^3.3
+10.648
+------
+> ?10%4
+2
+-
+> ?10.5%4.2
+2
+-
+>
+Goodbye!
+
+```
 
 ## Reflection (30%)
 
@@ -317,14 +424,34 @@ Create a file named `reflect.txt` that contains your detailed description of the
 
 You may be asked to talk about your reflection (as a presentation) in class.
 
+
+
 ## Submission Process:
 
-
 ### Data Entry
-
+```text
+abc
+?2.2#1.1
+?2.2+1.1
+?2.2-1.1
+?2.2/1.1
+?2.2*1.1
+?2.2x1.1
+?2.2^3.3
+?10%4
+?10.5%4.2
+<ENTER>
+```
 
 ### Files to Submit
 
+```text
+main.c
+calc.h
+calc.c
+utils.h  // for flusing keyboard and other possible utility functions (already provided)
+utils.c
+```
 
 ### Submission 
 
