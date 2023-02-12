@@ -415,6 +415,8 @@ Invalid Command!
 Goodbye!
 
 ```
+### Video
+[DIY Explained](https://www.youtube.com/watch?v=DmLqY60b-EM&ab_channel=FardadSoleimanloo)
 
 ## Reflection (30%)
 
