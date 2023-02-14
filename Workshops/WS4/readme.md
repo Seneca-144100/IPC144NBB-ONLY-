@@ -1,7 +1,11 @@
 # Workshop #4: LOGIC <br />Loops, Switch Functions with return statement and simple header files
 
-Version 0.5: Only lab posted with no active submission scripts.
-Version 0.6: Added clarifications
+- Version 0.5: Only lab posted with no active submission scripts.
+- Version 0.6: Added clarifications
+- Version 0.7: Submission for lab is now open
+- Version 0.8: Output Corrected
+- Version 0.9: DIY posted and submission open 
+- Version 1.0: Updated DIY instructions and fixed main.c's print statement
 
 In the process of doing your workshop 4, in the **lab** (part 1) you are to create a `Ski Equipment Rental` program. You will code `rental.c` and `rental.h` and reuse functions in the `utils` module `utils.c and utils.h files` developed by your professor in class. **DIY** (part 2) Will be added later
 
@@ -175,7 +179,7 @@ This function receives an SKU number. Based on the SKU received, it will print t
 
 Here is the format of the printout:
 ```text
-Equiment name .... 99.99$
+Equipment name .... 99.99$
 ```
 
 If the SKU is not found in the list, `Invalid Selection!` is printed and `0.0` is returned.
@@ -259,7 +263,7 @@ Enter Sku or 0 to exit: 0
 ----------------------------
 Total price:       47.29
 Tax:                6.15
-Total + Tax:       61.48$
+Total + Tax:       53.44$
 ****************************
 Exit Program? (Y)es or (N)o: y
 
@@ -302,10 +306,116 @@ and follow the instructions.
 
 > **??Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
 
+
 # Part 2 DIY (50%)
 
-TBA
+## My Simple Calculator
 
+### `int calc()`
+For the DIY section of the workshop, you are responsible for coding: 'calc.c' and 'calc.h'. These files will contain the logic for a function that you code called `calc`. `calc` starts by prompting the user with the following indicator: `> ` to enter a single calculation command. Based on the calculation command entered by the user, calc will print the result of the calculation command (underlined with dashes '-') OR an error message if a bad command is entered. In both of these cases, the `calc` function flushes the keyboard and then returns true.
+
+If instead of a command the key `<Enter>` is pressed the function, just returns false.
+
+### Command Entry Format
+The function will receive the calculation command in the following format:  
+
+```text
+> ?num1@num2<ENTER>
+
+?: All calculation commands start with a '?' (question mark)
+num1: the first number
+@: the operation, one of: +, -, x, /, ^ and %, explained below
+num2: second number
+<ENTER>: enter key is pressed
+
+Specifications:
+mum1: Numbers are doubles for +, -, x, / and ^
+    : integer for % (read as double, cast to long)
+@: Addition(+), Subtraction(-), Multiplication(x), Division(/), Exponentiation(^) and Modulus(%)
+num2: doubles values for +, -, x,/ (non zero for /)
+    : integers for % and ^ (read as double, cast to long)
+    
+```
+
+### Result printing format
+
+For all cases, the result is printed as a double with three digits after the decimal point. Only when the user enters a "Modulus" calculation using the modulus operator ('%') should the result be printed as an integer
+
+### Implementation restrictions
+
+In your implementation of the `calc` function, if the user enters a valid query command, you must use a switch statement to do the right calculation/operation based on the operator that is read. 
+
+### Error handling
+
+If in any case, the command does not start with a `?` or `\n` or the three parts of the command (2 numbers and an operator) are not read successfully print the following error message:
+```text
+Invalid Command!
+[Question mark][First Number][Operation][Second Number]<ENTER>
+```
+
+If the operator is not recognized the following error message will be printed:
+```text
+'@' is not a valid operation, (only +,-,/,x,% and ^ are acceptable
+```
+(the `@` will be replaced with the invalid operator character that the user entered)
+
+
+## A Tester program
+
+The main function will have the 'calc' function in a loop as long as it returns true: 
+
+```C++
+#include <stdio.h>
+#include "calc.h"
+int main(void) {
+   printf("My Simple Calculator\n"
+          "-------------------------\n");
+   while(calc());
+   printf("Goodbye!\n");
+   return 0;
+}
+
+```
+
+> Note: the submission main tester program may be different
+
+## Sample execution
+
+```text
+My Simple Calculator
+-------------------------
+> abc
+Invalid Command!
+[Question mark][First Number][Operation][Second Number]<ENTER>
+> ?2.2#1.1
+'#' is not a valid operation, (only +,-,/,x,% and ^ are acceptable)
+> ?2.2+1.1
+3.300
+-----
+> ?2.2-1.1
+1.100
+-----
+> ?2.2/1.1
+2.000
+-----
+> ?2.2*1.1
+'*' is not a valid operation, (only +,-,/,x,% and ^ are acceptable)
+> ?2.2x1.1
+2.420
+-----
+> ?2.2^3.3
+10.648
+------
+> ?10%4
+2
+-
+> ?10.5%4.2
+2
+-
+>
+Goodbye!
+
+```
 
 ## Reflection (30%)
 
@@ -315,14 +425,34 @@ Create a file named `reflect.txt` that contains your detailed description of the
 
 You may be asked to talk about your reflection (as a presentation) in class.
 
+
+
 ## Submission Process:
 
-
 ### Data Entry
-
+```text
+abc
+?2.2#1.1
+?2.2+1.1
+?2.2-1.1
+?2.2/1.1
+?2.2*1.1
+?2.2x1.1
+?2.2^3.3
+?10%4
+?10.5%4.2
+<ENTER>
+```
 
 ### Files to Submit
 
+```text
+main.c
+calc.h
+calc.c
+utils.h  // for flushing keyboard and other possible utility functions (already provided)
+utils.c
+```
 
 ### Submission 
 
