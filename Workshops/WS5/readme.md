@@ -1,8 +1,10 @@
 # Workshop #5: Arrays, C strings (null-terminated array of characters) and functions
 
 Version 0.8 (under review)
+Version 0.9: updated instructions. Fixed spelling mistakes
+Version 0.91: updated instructions again. 
 
-In the process of doing your workshop 5 (lab and DIY), you will create a **Subject Mark Report** program; This program will receive Subject-Code (i.e IPC144NAA) and a series of student information (student number and mark) and print a report based on the received information 
+In the process of doing your workshop 5 (lab and DIY), you will create a **Subject Mark Report** program. This program will receive Subject-Code (i.e., IPC144NAA) and a series of student information (student number and mark) and print a report based on the received information 
 
 ## Learning Outcomes
 
@@ -95,7 +97,7 @@ Check the output, and closely compare it with the expected output. Make sure the
 void printReport(const char subjectCode[], const int studentNumbers[], 
                                            const int marks[], int noOfStudents)`
 ```
-In this part of the workshop, code a function to generate a report from information stored in several arrays in a module called `classList`  (i.e classList.h  and classList.c)
+In this part of the workshop, code a function to generate a report from information stored in several arrays in a module called `classList`  (i.e., classList.h and classList.c)
 
 The following tester program [printReportTester.c](lab/printReportTester.c) demonstrates how the function is used and what is the output:
 
@@ -131,10 +133,12 @@ SUBJECT MARKS REPORT!
 #### implementation 
 
 ##### step 1 
-Add the function body to `classList.c` and the prototype to `classList.h` and add four integer variables for a loop counter, average mark, lowest mark and highest mark.
+Add the function body to `classList.c` and the prototype to `classList.h`. In your function, you will add four integer variables. Specifically,
+you will be adding a variable for your loop counter, the average mark, lowest mark, and highest mark.
+
 
 ##### step 2
-Make the function only print the first six lines of output. Use the output sample of the static lines and use `%s` format specifier in printf to print the subject Code. Use a specific width setting in `%s` to have the surrounding bars (`|`) aligned. 
+Make the function only print the first six lines of output. Use the output sample of the static lines and use `%s` format specifier in printf to print the subject Code. Use a specific width setting in `%s` to have the surrounding bars (`|`) aligned. To review how to align our character string's output, check out: https://intro2c.sdds.ca/F-Refinements/character-strings#qualifiers 
 
 Now test the function and make sure you get this output:
 
@@ -148,10 +152,10 @@ SUBJECT MARKS REPORT!
 ```
 
 #### step 3
-In a loop from zero to the `number of students` argument value print each data line with student number and marks. These values are held in the elements of the `student numbers` array argument and the `marks` array argument
+In a loop that starts from zero that goes up to the `number of students` argument value - print each data line with student number and marks. These values are held in the elements of the `student numbers` array argument and the `marks` array argument
 
 #### step 4
-While looping keep track of the lowest and highest marks (as covered in class) and the value of each `marks` element to the average mark.
+While looping, keep track of the lowest and highest marks (as covered in class) and the value of each `marks` element to the average mark.
 
 #### step 5
 Divide the value of the average by the number of students and then print the last five lines of the report using these values.
@@ -170,9 +174,9 @@ RR:
 Student Number: 123456
 Mark: 99
 ```
-- RR is replaced with date entry row number. (1 to number of students)
-- 123456, is an example of user data entry for student number
-- 99, is an example of user data entry for student mark
+- RR is replaced with the row number of the current data entry. (1 to number of students)
+- 123456 is an example of a valid user-entered student number
+- 99 is an example of a valid user-entered student mark
 
 ### execution sample:
 ```text
@@ -267,7 +271,10 @@ Improve your lab work by making your number of data entries foolproof and your r
 ## Code improvement 
 
 ### step 1
-Rename the `void main(void )` function to `void subjectMarksReport(void)` and move it to the `classList.c` file and add the prototype to the `classList.h` header file. 
+Study the main function below. You will be coding `void subjectMarksReport(void)` and `int getMMInt(int min, int max, const char valueName[])`.
+For `void subjectMarksReport(void)`, put its definition in `classList.c` and its prototype in `classList.h`.
+For `int getMMInt(int min, int max, const char valueName[])`, put its definition in `utils.c` and its prototype in `utils.h`.
+Note, `void subjectMarksReport(void)` call the `int getMMInt(int min, int max, const char valueName[])` that you code.
 
 ### step 2
 compile and run your code with the provided main tester and make sure everything works.
@@ -294,7 +301,7 @@ int getMMInt(int min, int max, const char valueName[]);
 ```
 add a function to utils.c to get an integer within a range. Call the `getInt()` function for integer validation and then check the received value to be between min and max. If not print the following message:  
 ```text
-[1<=??????<=50], try agian: _
+[1<=??????<=50], try again: _
 ```
 replace ?????? with the valueName received from the argument list. 
 
@@ -308,9 +315,9 @@ printf("You are %d years old!\n", age);
 should run as follows:  
 ```text
 Enter your age: 9
-[18<=AGE<=99], try agian: abc
+[18<=AGE<=99], try again: abc
 Invalid Integer, try again: 100
-[18<=AGE<=99], try agian: 40
+[18<=AGE<=99], try again: 40
 You are 40 years old!
 ```
 
