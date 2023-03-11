@@ -35,6 +35,8 @@ For Mac you must use and alternative development environment like [XCode](https:
 - [05 jan 24, expressions, loops and repetition, functions with one argument](https://youtu.be/Y0xm_OQx8Ak)
 - [06 Jan 31, functions that return value, if, esle if](https://youtu.be/4wSsqcPRpYY)
 - [07 Feb 07, Switches and Output Formatting](https://youtu.be/KPT1dGuO9-4)
+- [08 Feb 16, Arrays](https://youtu.be/Q_4q1M_xuj8)
+- [09 Feb 24, scanf("%[^\n]") and struct (structure)](https://youtu.be/mcPFfnAc4OA)
 
 # Office
 [![Fardad Office](images/244Office.png)](https://teams.microsoft.com/l/channel/19%3adWp8NHtKn8C43A1EsfN70Dkxi00NNSdWT5H_5RzVDI41%40thread.tacv2/General?groupId=c8867f6e-1fdd-4571-851b-6f5907940a53&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)
