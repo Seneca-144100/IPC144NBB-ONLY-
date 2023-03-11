@@ -1,0 +1,8 @@
+#include <stdio.h>
+#define PI 3.14159265
+int foo(char ch) {
+   int i;
+   for (i = 0; i < 2; i++) {
+      putchar(++ch);
+   }
+   printf("\n%d\n*", i);
