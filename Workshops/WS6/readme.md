@@ -248,39 +248,9 @@ You may be asked to talk about your reflection (as a presentation) in class.
 
 ## Submission Process:
 
-### Data Entry
-```text
-OOP244NCC
-5
-1111111
-11111
-abc
-101
-100
-22222
-22
-33333
-33
-44444
-44
-55555
-55
-
-```
-
-### Files to Submit
-
-```text
-main.c
-classList.h
-classList.c
-utils.h  
-utils.c
-```
-
 ### Submission 
 
-Upload the files listed above to your `matrix` account (use git or SFTP). Compile and run your code using the `gcc` compiler as shown in [Compiling and Testing Your Program](#compiling-and-testing-your-program) and make sure that everything works properly.
+Upload the files reflect.txt file to you matrix account.
 
 Then, run the following command from your matrix account
 
