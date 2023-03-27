@@ -1,0 +1,68 @@
+Testing POS.h defined values:
+TAX value is corrct!
+MAX_SKU_LEN value is corrct!
+MAX_STOCK_NUMBER value is corrct!
+MAX_NO_ITEMS value is corrct!
+MAX_BILL_ITEMS value is corrct!
+>>>> Loading Items...
+The Sene-Store
+1- Inventory
+2- Add item
+3- Remove item
+4- Stock item
+5- POS
+0- exit program
+> abc
+Invalid Integer, try again: -1
+[0<=Selection<=5], retry: 6
+[0<=Selection<=5], retry: 1
+>>>> Inventory...
+The Sene-Store
+1- Inventory
+2- Add item
+3- Remove item
+4- Stock item
+5- POS
+0- exit program
+> 2
+>>>> Adding Item...
+The Sene-Store
+1- Inventory
+2- Add item
+3- Remove item
+4- Stock item
+5- POS
+0- exit program
+> 3
+>>>> Remove Item...
+The Sene-Store
+1- Inventory
+2- Add item
+3- Remove item
+4- Stock item
+5- POS
+0- exit program
+> 4
+>>>> Stock Items...
+The Sene-Store
+1- Inventory
+2- Add item
+3- Remove item
+4- Stock item
+5- POS
+0- exit program
+> 5
+>>>> Point Of Sale...
+The Sene-Store
+1- Inventory
+2- Add item
+3- Remove item
+4- Stock item
+5- POS
+0- exit program
+> 0
+>>>> Saving Items...
+Goodbye!
+
+D:\Users\phard\Documents\Seneca\ipc144\IPC144NBB-DEV\Project\MS1\x64\Debug\MS1.exe (process 1996) exited with code 0.
+Press any key to close this window . . .
