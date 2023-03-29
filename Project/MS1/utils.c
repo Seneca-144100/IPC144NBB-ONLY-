@@ -21,7 +21,7 @@ double getDbl(void) {
    char newline = 'x';
    while(!done) {
       if(scanf("%lf%c", &value, &newline) == 2) {
-         if(newline = '\n') {
+         if(newline == '\n') {
             done = 1;
          } else {
             printf("Please enter only an integer: ");
@@ -48,7 +48,7 @@ int getInt(void) {
    char newline = 'x';
    while(!done) {
       if(scanf("%d%c", &value, &newline) == 2) {
-         if(newline = '\n') {
+         if(newline == '\n') {
             done = 1;
          }
          else {
