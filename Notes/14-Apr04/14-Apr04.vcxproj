@@ -133,6 +133,9 @@
   <ItemGroup>
     <ClInclude Include="utils.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="students.csv" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
