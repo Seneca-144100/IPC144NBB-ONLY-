@@ -306,7 +306,7 @@ Inventory listing is a call to the `void inventory(void)` function. To implement
 
 #### 1- `double cost(const struct Item* item)`
 
-This function receives an address of an item structure and returns the total cost of that item in inventory using the following calculation:
+This function receives an address of an item structure and returns the cost of that item after tax using the following calculation:
  
 `the_cost = price * (1+ taxed* TAX)`
 
