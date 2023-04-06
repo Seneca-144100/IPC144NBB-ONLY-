@@ -1,7 +1,5 @@
 # Project: Simple Point Of Sale System
 
-## Latest Release
-MS2 
 
 ### Milestones
 
@@ -25,20 +23,20 @@ Two additional milestones are added as a bonus for those who want to do some ext
 |Milestone| Mark | Due date | Submission Policy|
 |:------:|:---:|:---:|-------|
 | MS1 | 20% | Apr 2 | gets full mark even if 1 week late. gets 0% afterwards|
-| MS2 | 20% | Apr 7 | gets full mark even if 1 week late. gets 0% afterwards|
-| MS3 | 60% | Apr 16 | See below|
-| MS4 | +10% | Apr 21 |         |
-| MS5 | +10% | Apr 21 |         |
+| MS2 | 20% | Apr 10 | gets full mark even if 1 week late. gets 0% afterwards|
+| MS3 | 60% | Apr 18 | See below|
+| MS4 | +10% | Apr 23 |         |
+| MS5 | +10% | Apr 23 |         |
 
 > To make the final submission of the project easier and to make it possible to partially submit a project we have divided the submission of milestone 3 into five small ones. Each submission is worth 12% of the project mark. Your project will be marked only if you have all four milestones and at least have one of the five submissions of milestone 5. 
 
 |Milestone 3<br/> Divided into<br/>five submission| Mark | Due date | Submission Policy|
 |:------|:---:|:---:|-------|
-| [m31](#ms51-submission-test) | 12% | Apr 16th | 10% penalty for each day being late up to 5 days|
-| [m32](#ms32-submission-test) | 12% | Apr 16th | 10% penalty for each day being late up to 5 days|
-| [m33](#ms33-submission-test) | 12% | Apr 16th | 10% penalty for each day being late up to 5 days|
-| [m34](#ms34-submission-test) | 12% | Apr 16th | 10% penalty for each day being late up to 5 days|
-| [m35](#ms35-submission-test) | 12% | Apr 16th | 10% penalty for each day being late up to 5 days|
+| [m31](#ms31-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
+| [m32](#ms32-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
+| [m33](#ms33-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
+| [m34](#ms34-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
+| [m35](#ms35-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
 
 
 > :warning: The first two milestones must be submitted successfully even if they are very late.<br /> Your project will receive a mark of zero if any of the first 2 milestones are not submitted by the rejection date (Apr 21) . For your project to be marked, you must submit the 2 milestones and at least one of the 5 submissions of Milestone 3 (The rejection date for all milestones is Apr 21)
@@ -281,9 +279,143 @@ and follow the instructions.
 
 ## [Back to milestones](#milestones)
 
-# Milestone 2
+# Milestone 2 (Inventory listing)
+
+For your milestone 2 implement the first menu option of the application.
+
+## Item definition and the data array
+
+Add a structure for an `Item` to the `PosApp.h` header file to hold a record for an Item to be sold using the POS system.
+
+An item has the following:
+
+- SKU (Character C-string with a maximum length of MAX_SKU_LEN )
+- name (Character C-string with a maximum length of 60)
+- price (double)
+- taxed (an integer flag; true or false)
+- quantity (integer)
+
+
+Add a global array of `Item` structure with `MAX_NO_ITEMS` elements to store the items read from the file (we will call this array `items` array from now on)
+
+Add a global integer variable to hold the number of records read from the file (we call this integer `noOfItems` from now on)
+
+## Inventory listing
+
+Inventory listing is a call to the `void inventory(void)` function. To implement this function you need to create 3 helper functions first:
+
+#### 1- `double cost(const struct Item* item)`
+
+This function receives an address of an item structure and returns the total cost of that item in inventory using the following calculation:
+ 
+`total_cost = price * (1+ taxed* TAX)`
+
+- total_cost: value to be returned
+- price: the price of the item
+- taxed: The tax flag that is either true(1) or false(0)
+- TAX: defined in `POS.h`
+
+#### 2- `int LoadItems(const char filename[])`
+
+This function loads all the items from a data file (the name received from the argument) into the `items` array and sets the `noOfItems` variable to the number of records read.
+
+The records are in the following format:  
+- SKU
+- comma (`,`)
+- item name
+- comma (`,`)
+- price 
+- comma (`,`)
+- taxed or not (0 or 1)
+- comma (`,`)
+- quantity
+- newline
+
+To accomplish this do the following:
+
+- print `>>>> Loading Items...`
+- In a `File*` variable open the `filename` for reading
+- If the opening is successful (The file pointer is not null)
+    - in a loop read all the items of the file into the `items` array
+    - set `noOfItems` to the number of records read
+- print `>>>> Done!...`
+- return the `noOfItems`
+
+#### 3- `void listItems(void)`
+
+Lists the items in the `items` array up to `noOfItems`.
+
+To accomplish this do the following:
+
+Create a local c-string for printing name (18+1 characters), let's call this `iName`
+
+- print the header:
+```text
+ Row | SKU    | Item Name          | Price |TX | Qty |   Total |
+-----|--------|--------------------|-------|---|-----|---------|
+```
+- in a loop starting from zero up to `noOItems` go through the elements of the `items` array
+    - copy the first 18 characters of the `item` element into `iName`
+    - print row number (loop index + 1) under  (in 4 spaces)
+    - print `" | "`
+    - print the SKU  (in 6 spaces)
+    - print `" | "`
+    - print the `iName` (in 18 spaces left-justified)
+    - print `" |"`
+    - print the price  (in 6 spaces 2 digits after the decimal point)
+    - print `" | "`
+    - print if it is taxed (`T` if is taxed or space if not)
+    - print quantity (in 3 spaces)
+    - print `" |"`
+    - print total price ([cost](#1--double-costconst-struct-item-item) * quantity in 8 spaces 2 digits after the decimal point )
+    - print `" |\n"`
+- print the footer
+```text
+-----^--------^--------------------^-------^---^-----^---------^
+```
+### `void inventory(void)` 
+Now that the 3 helper functions are done, using the three functions implement this function as follows:
+
+- Create a double variable for total asset value (let's call it `tav`) and set it to zero
+- Print `>>>> List Items...`
+- Call `listItems()`
+- Calculate the total asset value (`tav`) by looping through the `items` elements and accumulating the `cost * quantity` of each element in `tav`; 
+- print the total asset value in a footer in the following format:
+```text
+                               Total Asset: $  | 9999999999.99 |
+-----------------------------------------------^---------------^
+```
+
+
 
 ## MS2 Submission 
+
+### tester program
+<a href="MS2/main.c" target="_blank">main.c</a>
+
+### files to submit
+```text
+POS.h
+PosApp.c
+PosApp.h
+PosUI.c
+PosUI.h
+utils.c
+utils.h
+main.c
+```
+### Data entry
+```text
+1
+0
+```
+
+### expected output
+
+<a href="MS2/correct_output.txt" target="_blank">correct_output.txt</a>
+
+
+
 
 ### Submission Process
 
@@ -293,7 +425,7 @@ Upload your source code and the tester program to your `matrix` account. Compile
 
 Then, run the following command from your account (replace `profname.proflastname` with your professor’s Seneca userid):
 ```
-~profname.proflastname/submit 144/prj/m1
+~profname.proflastname/submit 144/prj/m2
 ```
 and follow the instructions.
 
@@ -316,12 +448,6 @@ and follow the instructions.
 ```
 
 ## [Back to milestones](#milestones)
-
-
-
-## [Back to milestones](#milestones)
-
-
 
 
 # Milestone 3
