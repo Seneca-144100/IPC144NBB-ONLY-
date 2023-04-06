@@ -308,9 +308,9 @@ Inventory listing is a call to the `void inventory(void)` function. To implement
 
 This function receives an address of an item structure and returns the total cost of that item in inventory using the following calculation:
  
-`total_cost = price * (1+ taxed* TAX)`
+`the_cost = price * (1+ taxed* TAX)`
 
-- total_cost: value to be returned
+- the_cost: value to be returned
 - price: the price of the item
 - taxed: The tax flag that is either true(1) or false(0)
 - TAX: defined in `POS.h`
