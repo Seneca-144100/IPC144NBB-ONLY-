@@ -8,7 +8,8 @@
 | [MS1](#milestone-1) | V0.9 | 7 |  | POS mock-up application | `=============` |
 | [MS2](#milestone-2-inventory-listing) | V1.0 | 5 |  | Inventory listing |  `==========` |
 | [MS3](#milestone-3) | | 9 |  | Point of Sale | `==================` |
-| Delivarable 1: | MS31 |   |  |  MS31 released | `==.` |
+| Deliverable 1: | MS31 |   |  |  MS31 released | `==.` |
+| Deliverable 2: | MS32 |   |  |  MS32 released | `=-` |
 | [MS4](#milestone-4) |  |  |  | Stock Item | `===` |
 | [MS5](#milestone-5) |  |  |  | Add and Remove Items | `======` |
 
@@ -494,12 +495,31 @@ Please note that, unlike the following output, the data file during submission w
 ```
 ~profname.proflastname/submit 144/prj/m31 
 ```
-## MS32 submission test
+## MS32 `double billDisplay(const struct Item* item)`
 
-> :construction: under construction
+This function will be used in POS to print a bill. 
+
+- Display the name, cost and if the item is taxed as follows;
+    - print `"| "`
+    - print the first 14 characters of the name in 14 spaces left justified
+    - print `"|"`
+    - print the cost of the item (price after tax, in 10 spaces with 2 digits after the decimal point)
+    - print `" | "`
+    - print `Yes` if the item is taxed or three spaces if not
+    - print `" |\n"`
+- return the cost
+
+### tester program 
+
+<a href="MS3/main32.c" target="_blank">main32.c</a>
 
 ### Data entry
+
+No data entry is required
+
 ### Expected outcome
+
+<a href="MS3/correct_output_32.txt" target="_blank">correct_output_32.txt</a>
 
 ### MS32 Submission command
 ```
