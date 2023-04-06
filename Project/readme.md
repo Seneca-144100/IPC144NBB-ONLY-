@@ -6,7 +6,7 @@
 |Milestone| Revision | Approximate<br />(days) | Overview | Comments | Workload |
 |------|:---:|:----:|:----|:----|:-----| 
 | [MS1](#milestone-1) | V0.9 | 7 |  | POS mock-up application | `=============` |
-| [MS2](#milestone-2) | | 5 |  | Inventory listing |  `==========` |
+| [MS2](#milestone-2-inventory-listing) | | 5 |  | Inventory listing |  `==========` |
 | [MS3](#milestone-3) | | 9 |  | Point of Sale | `==================` |
 | [MS4](#milestone-4) |  |  |  | Stock Item | `===` |
 | [MS5](#milestone-5) |  |  |  | Add and Remove Items | `======` |
