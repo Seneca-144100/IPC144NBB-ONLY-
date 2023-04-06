@@ -42,6 +42,7 @@ For Mac you must use and alternative development environment like [XCode](https:
 - [12 Mar 17, Pointers](https://youtu.be/RvCEcsDFVok)
 - [13 Mar 21, Pointer and arrays and structures](https://youtu.be/SmLrDw74gsM)
 - [14 Mar 28, Project and strings](https://youtu.be/byyHfvtrLgw)
+- [15 Apr 04, Algorithms Part1](https://youtu.be/S4jRY7OwVFU)
 
 # Office
 [![Fardad Office](images/244Office.png)](https://teams.microsoft.com/l/channel/19%3adWp8NHtKn8C43A1EsfN70Dkxi00NNSdWT5H_5RzVDI41%40thread.tacv2/General?groupId=c8867f6e-1fdd-4571-851b-6f5907940a53&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)
