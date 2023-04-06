@@ -8,6 +8,7 @@
 | [MS1](#milestone-1) | V0.9 | 7 |  | POS mock-up application | `=============` |
 | [MS2](#milestone-2-inventory-listing) | V1.0 | 5 |  | Inventory listing |  `==========` |
 | [MS3](#milestone-3) | | 9 |  | Point of Sale | `==================` |
+| Delivarable 1: | MS31 |   |  |  MS31 released | `==.` |
 | [MS4](#milestone-4) |  |  |  | Stock Item | `===` |
 | [MS5](#milestone-5) |  |  |  | Add and Remove Items | `======` |
 
@@ -451,22 +452,43 @@ and follow the instructions.
 
 
 # Milestone 3
+For Milestone 3, that is the Point Of Sale system (menu option 5), you need to create 5 functions; Each function is one of the 5 parts of Milestone 3 with its own tester program
 
-> :construction: under construction
+### reflection 
 
+Create a file called `reflect.txt` and add the following:  
+- Citation, for any part of the code that is not yours. 
+- Any additional (extra) work done that needs your professor's attention.
+- Your overall reflection on the project and work done in the milestones (You don't need to repeat this in all your MS3 reflections; this can be done only in your last submissions of milestone 3)
+
+
+## MS31  `void saveItems(const char filename[])`
+
+Create a function in PosApp.c module called saveItems, this function receives a file name and saves all the elements of the `items` array in the file in a comma-separated format identical to the `posdata.csv` file.
+
+- open the file (using the `filename` argument) for writing. 
+- If the opening was successful.
+    - In a loop write all the variables of the `items` elements in the comma-separated format up to `noOfItems`. Make sure each record is separated from the next one with a new-line character(`\n`). 
+    - close the file
+- If the opening was not successful print `Could not open >>?????<<\n` replace `?????` with the file name 
 
 ## MS31 submission test
 
-> :construction: under construction
+### tester program
+
+<a href="MS3/main31.c" target="_blank">main31.c</a>
 
 ### Data entry
+
+No manual data entry needed
+
+Data file: <a href="MS3/posdata.csv" target="_blank">posdata.csv</a>
+
 ### Expected outcome
 
-### reflection 
-Create a file called `reflect.txt` and add the following:  
-- Your Citation if you have any borrowed code in your project.
-- Any additional (extra) work done that needs your professor's attention.
-- Your overall reflection on the project and work done in the 5 milestones. 
+Please note that, unlike the following output, the data file during submission will have only 3 records; therefore, the output will be much shorter.
+<a href="MS3/correct_output_31.txt" target="_blank">correct_output_31.txt</a>
+
 
 ### MS31 Submission command
 ```
