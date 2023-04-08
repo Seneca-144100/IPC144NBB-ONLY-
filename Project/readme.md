@@ -165,18 +165,18 @@ This module is already created and contains the mock-up functions of what needs 
 
 ### Implementation
 
-For milestone 1 you are responsible to create a mock-up module for the Point Of Sale that will demonstrate how the system is going to run (eventually) by only printing the name of the actions, instead of executing them. In later stages of development, you will replace these messages with the proper logic to actually perform the action. 
+For milestone 1 you will create a mock-up module for the Point Of Sale that will demonstrate how the system is going to run (eventually) by only printing the name of the actions, instead of executing them. In later stages of development, you will replace these messages with the proper logic to actually perform the action. 
 
 Note that the signature of many of the functions created now may be changed to accommodate what needs to be done later.
 
 #### The `PosUI` functions
 
-In the module `PosUI` create two functions `menu` and `runPos`
+In the `PosUI` module, you will create two functions: `menu` and `runPos`
 
 ##### `int menu(void)` 
 
-Write a function to display the name of the application and the options to select for the user.<br />
-This function will display the menu of the system, receive the user's choice (in a foolproof way) and returns the choice. See below:
+Write a function that displays the name of the application and the other options to select in the application.<br />
+This function will display the menu of the system, receive the user's choice (in a foolproof way, *hint*: use your utils) and returns the choice. See below:
 
 ```text
 The Sene-Store
@@ -195,14 +195,14 @@ Invalid Integer, try again: -1
 
 ##### Mockup functions:
 
-the following 7 mock-up functions are provided in the `PosAp` module that only print `>>>>> ` and their names.
+the following 7 mock-up functions are provided in the `PosAp` module that only print `>>>>> ` and their names. *tips:* for each of these functions, consider making a reusable 'display' function to prevent duplicate code.
 
 1. inventory()
 2. addItem()
 3. removeItem()
 4. stockItem()
 5. POS()
-6. LoadItems(filename)
+6. loadItems(filename)
 7. saveItem(filename)
 
 Call the above functions in the `runPos` function when needed.
@@ -213,7 +213,7 @@ receives the name of the data file and returns void.
 
 > implement the following actions calling the corresponding mockup methods
 
-This method first loads all the item records and then displays the menu waiting for the user to make the selection. After the (foolproof) selection the proper action is executed and again the menu is displayed until the option exit is selected. In the latter case, all the records are saved and a `Goodbye!` message is displayed.
+This method first loads all the item records and then displays the menu waiting for the user to make the selection. After the (foolproof) selection, the proper action is executed, then the menu is displayed again until the 'exit' option is selected. When the 'exit' option is selected, all the records are saved and a `Goodbye!` message is displayed.
 
 See the <a href="MS1/correct_output.txt" target="_blank">correct_output.txt</a> file for sample execution.
 
@@ -297,14 +297,15 @@ An item has the following:
 - taxed (an integer flag; true or false)
 - quantity (integer)
 
+*tip*: maximum length refers to the amount of 'readable characters' the c-string has.
 
-Add a global array of `Item` structure with `MAX_NO_ITEMS` elements to store the items read from the file (we will call this array `items` array from now on)
+Add a global array of `Item` structure type and set the number of elements that it can contain to: the `MAX_NO_ITEMS`. This will be important when storing the items read from the file into our application. (we will call this array `items` array from now on)
 
 Add a global integer variable to hold the number of records read from the file (we call this integer `noOfItems` from now on)
 
 ## Inventory listing
 
-Inventory listing is a call to the `void inventory(void)` function. To implement this function you need to create 3 helper functions first:
+The Inventory listing component of our application starts with a call to the `void inventory(void)` function. To implement this function you need to create 3 helper functions first:
 
 #### 1- `double cost(const struct Item* item)`
 
@@ -316,6 +317,8 @@ This function receives an address of an item structure and returns the cost of t
 - price: the price of the item
 - taxed: The tax flag that is either true(1) or false(0)
 - TAX: defined in `POS.h`
+
+As a side note, consider why we pass pointers to an item structure as opposed to passing an item structure by value.
 
 #### 2- `int LoadItems(const char filename[])`
 
@@ -335,28 +338,29 @@ The records are in the following format:
 
 To accomplish this do the following:
 
-- print `>>>> Loading Items...`
+- print `>>>> Loading Items...` *hint*: reuse logic that you've coded already
 - In a `File*` variable open the `filename` for reading
 - If the opening is successful (The file pointer is not null)
     - in a loop read all the items of the file into the `items` array
     - set `noOfItems` to the number of records read
 - print `>>>> Done!...`
 - return the `noOfItems`
+- For a refresher on working with files, visit: https://intro2c.sdds.ca/E-Secondary-Storage/records-and-files 
 
 #### 3- `void listItems(void)`
 
-Lists the items in the `items` array up to `noOfItems`.
+A display function that lists the items in the `items` array up to `noOfItems`.
 
 To accomplish this do the following:
 
-Create a local c-string for printing name (18+1 characters), let's call this `iName`
+Create a local c-string for printing name (18 readable characters+ 1 for the null byte), let's call this `iName`
 
 - print the header:
 ```text
  Row | SKU    | Item Name          | Price |TX | Qty |   Total |
 -----|--------|--------------------|-------|---|-----|---------|
 ```
-- in a loop starting from zero up to `noOItems` go through the elements of the `items` array
+- in a loop starting from zero up to `noOItems`, go through the elements of the `items` array
     - copy the first 18 characters of the `item` element into `iName`
     - print row number (loop index + 1) under  (in 4 spaces)
     - print `" | "`
@@ -366,17 +370,17 @@ Create a local c-string for printing name (18+1 characters), let's call this `iN
     - print `" |"`
     - print the price  (in 6 spaces 2 digits after the decimal point)
     - print `" | "`
-    - print if it is taxed (`T` if is taxed or space if not)
+    - print if it is taxed (`T` if is taxed or space if not) *hint*: try doing this all in one printf using inline calculations
     - print quantity (in 3 spaces)
     - print `" |"`
-    - print total price ([cost](#1--double-costconst-struct-item-item) * quantity in 8 spaces 2 digits after the decimal point )
+    - print total price using the following inline calculation: ([cost](#1--double-costconst-struct-item-item) * quantity in 8 spaces 2 digits after the decimal point )
     - print `" |\n"`
 - print the footer
 ```text
 -----^--------^--------------------^-------^---^-----^---------^
 ```
 ### `void inventory(void)` 
-Now that the 3 helper functions are done, using the three functions implement this function as follows:
+Now that the 3 helper functions are done, use the three functions implement this function as follows to:
 
 - Create a double variable for total asset value (let's call it `tav`) and set it to zero
 - Print `>>>> List Items...`
@@ -465,13 +469,14 @@ Create a file called `reflect.txt` and add the following:
 
 ## MS31  `void saveItems(const char filename[])`
 
-Create a function in PosApp.c module called saveItems, this function receives a file name and saves all the elements of the `items` array in the file in a comma-separated format identical to the `posdata.csv` file.
+Create a function in PosApp.c module called saveItems, this function receives a filename and saves all the elements of the `items` array in the file in a comma-separated format identical to the `posdata.csv` file.
 
 - open the file (using the `filename` argument) for writing. 
-- If the opening was successful.
-    - In a loop write all the variables of the `items` elements in the comma-separated format up to `noOfItems`. Make sure each record is separated from the next one with a new-line character(`\n`). 
+- If the opening was successful...
+    - in a loop that goes up to `noOfItems`, write all the variables of the `items` elements in a comma-separated format. Make sure each record is separated from the next one with a new-line character(`\n`). 
     - close the file
 - If the opening was not successful print `Could not open >>?????<<\n` replace `?????` with the file name 
+- for a refresher on writing to opening a file for writing, visit: https://intro2c.sdds.ca/E-Secondary-Storage/text-files#writing
 
 ## MS31 submission test
 
@@ -499,7 +504,8 @@ Please note that, unlike the following output, the data file during submission w
 
 This function will be used in POS to print a bill. 
 
-- Display the name, cost and if the item is taxed as follows;
+- Create a temporary cString with a size of 14 readable characters + 1 for the null-byte
+- Display the item's name, cost, and if the item is taxed as follows;
     - print `"| "`
     - print the first 14 characters of the name in 14 spaces left justified
     - print `"|"`
