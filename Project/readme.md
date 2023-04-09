@@ -10,6 +10,7 @@
 | [MS3](#milestone-3) | | 9 |  | Point of Sale | `==================` |
 | Deliverable 1: | MS31 |   |  |  MS31 released | `==.` |
 | Deliverable 2: | MS32 |   |  |  MS32 released | `=-` |
+| Deliverable 3: | MS33 |   |  |  MS33 released | `==-` |
 | [MS4](#milestone-4) |  |  |  | Stock Item | `===` |
 | [MS5](#milestone-5) |  |  |  | Add and Remove Items | `======` |
 
@@ -533,13 +534,60 @@ No data entry is required
 ```
 ## [Back to milestones](#milestones)
 
-## MS33 submission test
 
-> :construction: under construction
+## MS33 `void display(const struct Item* item)`
+
+
+This function is used to print an Item in a "Form" (i.e non-linear, detailed) format.
+
+- print `=============v`
+- print `Name:`
+- print the name aligned with the `v` of the first line
+- print `Sku:`
+- print the SKU aligned with the `v` of the first line
+- print `Price: `
+- print the price aligned with the `v` of the first line with 2 digits after the decimal point
+- print `Price + tax:`
+- print the `cost()` with 2 digits after the decimal point or `N/A` if the Item is not taxed, aligned with the `v` of the first line  
+- print `Stock Qty:`
+- print the quantity aligned with the `v` of the first line
+- print `=============^`
+- go to a new line
+
+
+
+### sample ouptut
+
+```text
+=============v
+Name:        Joe's Organic Potato Chips
+Sku:         6539
+Price:       3.29
+Price + tax: 3.72
+Stock Qty:   15
+=============^
+=============v
+Name:        Milk
+Sku:         1234
+Price:       3.99
+Price + tax: N/A
+Stock Qty:   1
+=============^
+```
+
+## MS33 submission
 
 ### Data entry
 
+N/A
+
+### Tester program
+
+<a href="MS3/main33.c" target="_blank">main33.c</a>
+
 ### Expected outcome
+
+<a href="MS3/correct_output_33.txt" target="_blank">correct_output_33.txt</a>
 
 ### MS33 Submission command
 ```
