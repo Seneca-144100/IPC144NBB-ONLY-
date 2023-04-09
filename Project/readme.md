@@ -8,10 +8,11 @@
 | [MS1](#milestone-1) | V0.9 | 7 |  | POS mock-up application | `=============` |
 | [MS2](#milestone-2-inventory-listing) | V1.0 | 5 |  | Inventory listing |  `==========` |
 | [MS3](#milestone-3) | | 9 |  | Point of Sale | `==================` |
-| Deliverable 1: | MS31 |   |  |  MS31 released | `==.` |
-| Deliverable 2: | MS32 |   |  |  MS32 released | `=-` |
-| Deliverable 3: | MS33 |   |  |  MS33 released | `==-` |
-| Deliverable 4: | MS34 |   |  |  MS34 released | `==-` |
+| Deliverable 1: | [MS31](#ms31--void-saveitemsconst-char-filename) |   |  |  MS31 released | `==.` |
+| Deliverable 2: | [MS32](#ms32-double-billdisplayconst-struct-item-item) |   |  |  MS32 released | `=-` |
+| Deliverable 3: | [MS33](#ms33-void-displayconst-struct-item-item) |   |  |  MS33 released | `==-` |
+| Deliverable 4: | [MS34](#ms34-int-searchvoid) |   |  |  MS34 released | `==-` |
+| Deliverable 5: | [MS35](#ms35-void-posvoid) |   |  |  MS35 released | `====-` |
 | [MS4](#milestone-4) |  |  |  | Stock Item | `===` |
 | [MS5](#milestone-5) |  |  |  | Add and Remove Items | `======` |
 
@@ -36,11 +37,11 @@ Two additional milestones are added as a bonus for those who want to do some ext
 
 |Milestone 3<br/> Divided into<br/>five submission| Mark | Due date | Submission Policy|
 |:------|:---:|:---:|-------|
-| [m31](#ms31-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
-| [m32](#ms32-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
-| [m33](#ms33-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
-| [m34](#ms34-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
-| [m35](#ms35-submission-test) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
+| [m31](#ms31--void-saveitemsconst-char-filename) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
+| [m32](#ms32-double-billdisplayconst-struct-item-item) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
+| [m33](#ms33-void-displayconst-struct-item-item) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
+| [m34](#ms34-int-searchvoid) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
+| [m35](#ms35-void-posvoid) | 12% | Apr 18th | 10% penalty for each day being late up to 5 days|
 
 
 > :warning: The first two milestones must be submitted successfully even if they are very late.<br /> Your project will receive a mark of zero if any of the first 2 milestones are not submitted by the rejection date (Apr 21) . For your project to be marked, you must submit the 2 milestones and at least one of the 5 submissions of Milestone 3 (The rejection date for all milestones is Apr 21)
@@ -664,9 +665,87 @@ The search function returns: -2
 ```
 ## [Back to milestones](#milestones)
 
-## MS35 submission test
+## MS35 `void POS(void)`
+
+The POS function is the most important in the application. 
+
+This function can be implemented in two different ways; 
+1. Uses an array of Item structures to keep copies of the sold items for bill printing (uses more memory)
+2. Uses an array of Item structure pointers to keep the addresses of the sold items for bill printing (uses less memory )
+
+You can implement your POS function either way. The first version is less complicated and receives a full mark. The second way uses an array of pointers whose concept is not covered in IPC144 and is more complicated, hence receiving bonus marks. I recommend doing the first version and if successful, converting it to the second version later.
+> Note that you may be asked to defend or explain your method of implementation. 
+
+### Version 1: less complicated 
+The function POS in a loop using the search() function, asks the user for an SKU and then if the Item is found it will reduce the quantity of the item by one and then adds a copy of the item to a local array of Items (let us call this the `bill` Item array) and increases the value of a local integer variable to keep track of the items added to the bill. This integer number should be less than the `MAX_BILL_ITEMS` values, if the number reaches the `MAX_BILL_ITEMS` then the function ends by printing the bill.
+
+If the item is not found the message `"SKU not found!\n"` is printed.
+
+If the item is found but the quantity of the Item is zero, the message `"Item sold out!\n"` is printed.
+
+If the user does not enter an SKU and instead only hits `<ENTER>` the POS function ends by printing the bill.
+
+
+### Version 2: more complicated (bonus marks)
+If you have completed this bonus section you must indicate it in the `reflect.txt` file to get bonus morks.
+
+The function POS in a loop using the search() function, asks the user for an SKU and then if the Item is found it will reduce the quantity of the item by one and then adds the address of the item to a local array of Item pointers (let us call this the `bill` Item pointer array) and adds one to a local integer variable to keep track of the items added to the bill. This integer number should be less than the `MAX_BILL_ITEMS` defined value, if the number reaches the `MAX_BILL_ITEMS` then the function ends by printing the bill.
+
+If the item is not found the message `"SKU not found!\n"` is printed.
+
+If the item is found but the quantity of the Item is zero, the message `"Item sold out!\n"` is printed.
+
+If the user does not enter an SKU and instead only hits `<ENTER>` the POS function ends by printing the bill.
+
+
+### printing the bill
+Print the bill by first printing the bill title:
+```text
++---------------v-----------v-----+
+| Item          |     Price | Tax |
++---------------+-----------+-----+
+```
+Then in a loop go through the local `bill` array and print each element using the `billDisplay` array. Meanwhile, in a local double variable, accumulate the total bill price to be printed later.
+
+When done close the bill by printing a footer containing the total price as follows:
+```text
++---------------^-----------^-----+
+| total:          999999.99 |
+^---------------------------^
+````
+
+
+## MS35 submission
+> Before testing you must modify the `POS.h` file by setting the defined value of `MAX_BILL_ITEMS` to `3`.
+
+
+
 ### Data entry
+
+```text
+5
+5656
+5656
+1234
+1234
+<ENTER>
+5
+1313
+1212
+4567
+5
+5544
+<ENTER>
+0
+```
+
+### tester program 
+
+<a href="MS3/main35.c" target="_blank">main35.c</a>
+
 ### Expected outcome
+
+<a href="MS3/correct_output_35.txt" target="_blank">correct_output_35.txt</a>
 
 ### MS35 Submission command
 ```
