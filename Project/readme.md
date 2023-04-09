@@ -11,6 +11,7 @@
 | Deliverable 1: | MS31 |   |  |  MS31 released | `==.` |
 | Deliverable 2: | MS32 |   |  |  MS32 released | `=-` |
 | Deliverable 3: | MS33 |   |  |  MS33 released | `==-` |
+| Deliverable 4: | MS34 |   |  |  MS34 released | `==-` |
 | [MS4](#milestone-4) |  |  |  | Stock Item | `===` |
 | [MS5](#milestone-5) |  |  |  | Add and Remove Items | `======` |
 
@@ -596,16 +597,69 @@ N/A
 ## [Back to milestones](#milestones)
 
 
-## MS34 submission test
+## MS34 `int search(void)`
 
-> :construction: under construction
+The search function asks for an SKU entry from the user and loops and searches through the `items` array for the SKU entered. 
+
+1. if the SKU is found in the `items` array, the index of the item holding the `SKU` will be returned.
+2. if the SKU is not found in the `items` array, -1 is returned.
+3. if the user does not enter any SKU and just hits enter, -2 is returned. 
+
+- Prompt the user with `Sku: `
+- Scan the Sku in a local variable 
+- flush the keyboard if needed. 
+- loop through the `items` array and search for the SKU
+- After the loop return one of the stated above options in 1, 2 or 3. 
+
+> Note: a function with a good coding style should have only one `return` statement.
+
+### Sample executions for the following code snippet:
+
+```C
+int retValue = search();
+printf("The search function returns: %d", retValue);
+```
+
+- Assuming there is an item with the SKU `1234` in the `items` array at the index 20:
+```
+SKU: 1234<ENTER>
+The search function returns: 20
+```
+- Assuming there is no item with the SKU `1234` in the `items` array:
+```
+SKU: 1234<ENTER>
+The search function returns: -1
+```
+- Assuming the user only hits enter:
+```
+SKU: <ENTER>
+The search function returns: -2
+```
+
+
+## MS34 submission
+
 
 ### Data entry
+```text
+1313
+5656
+9852
+3333
+<ENTER>
+```
+> You need <a href="#2--int-loaditemsconst-char-filename" target="_blank">the loaditems function</a> implemented for this part  
+
+### tester program
+
+<a href="MS3/main34.c" target="_blank">main34.c</a>
+
 ### Expected outcome
-[m34-correct-output.txt](ms5/m34-correct-output.txt)
+
+<a href="MS3/correct_output_34.txt" target="_blank">correct_output_34.txt</a>
 
 ### MS34 Submission command
-```
+```  
 ~profname.proflastname/submit 144/prj/m34 
 ```
 ## [Back to milestones](#milestones)
