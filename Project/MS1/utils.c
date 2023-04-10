@@ -10,7 +10,7 @@ void pause(void) {
 int getIntMM(int min, int max, const char valueName[]) {
    int value = getInt();
    while(value < min || value > max) {
-      printf("[%d<=%s<=%d], retry: ", min, valueName, max);
+      printf("[%d<=%s<%d], retry: ", min, valueName, max);
       value = getInt();
    }
    return value;
@@ -21,15 +21,15 @@ double getDbl(void) {
    char newline = 'x';
    while(!done) {
       if(scanf("%lf%c", &value, &newline) == 2) {
-         if(newline == '\n') {
+         if(newline = '\n') {
             done = 1;
          } else {
-            printf("Please enter only an integer: ");
+            printf("Please enter only a double: ");
             flushKey();
          }
       } else { // user enterd non integer
          flushKey();
-         printf("Invalid Integer, try again: ");
+         printf("Invalid Double, try again: ");
       }
    }
    return value;
@@ -48,7 +48,7 @@ int getInt(void) {
    char newline = 'x';
    while(!done) {
       if(scanf("%d%c", &value, &newline) == 2) {
-         if(newline == '\n') {
+         if(newline = '\n') {
             done = 1;
          }
          else {
