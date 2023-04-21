@@ -31,7 +31,7 @@ Two additional milestones are added as a bonus for those who want to do some ext
 | MS2 | 20% | Apr 10 | gets full mark even if 1 week late. gets 0% afterwards|
 | MS3 | 60% | Apr 18 | See below|
 | MS4 | +10% | use -due |  10% bonus if on time  |
-| MS5 | +10% | use -due |  15% bonus if on time    |
+| MS5 | +10% | use -due |  10% bonus if on time    |
 
 > To make the final submission of the project easier and to make it possible to partially submit a project we have divided the submission of milestone 3 into five small ones. Each submission is worth 12% of the project mark. Your project will be marked only if you have all four milestones and at least have one of the five submissions of milestone 5. 
 
