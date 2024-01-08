@@ -1,3 +1,0 @@
-    printf("What the heck????\n");
-    return 0;
-}
