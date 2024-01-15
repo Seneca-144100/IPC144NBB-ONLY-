@@ -23,7 +23,8 @@ For Mac you must use and alternative development environment like [XCode](https:
 - [Install Windows 10 on Fusion VM](https://www.groovypost.com/howto/create-custom-virtual-machine-vmware-fusion/)
 
 ## Recordings of Sessions
-- [01-Jan09- Welcome!](https://youtu.be/9PmVzIEZ6Ds?si=16-gQYlAKhQBJ7Se)
+- [Jan09- Welcome!](https://youtu.be/9PmVzIEZ6Ds?si=16-gQYlAKhQBJ7Se)
+- [01-Jan11, Computers, programming, Visual studio, first C code, intro to functions](https://youtu.be/6iRRXu0IuZU?si=duvAAmXsNjHB0Al2)
 
 
 # Office
