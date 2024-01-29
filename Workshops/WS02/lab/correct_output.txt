@@ -1,0 +1,14 @@
+Script started on Mon 29 Jan 2024 01:48:20 PM EST
+---===<<<  Student Marks Average Calculator >>>===---
+
+Please enter the number of marks
+> 3
+Enter mark #1
+> 77.66
+Enter mark #2
+> 88.55
+Enter mark #3
+> 99.44
+Your average mark is: 88.5
+
+Script done on Mon 29 Jan 2024 01:49:27 PM EST
