@@ -144,7 +144,7 @@ These are the functions that we will code during this lab. Use the pseudocodes t
 
 #### **utils.c** file (utils module)
 Here are the functions written `utils.c`
-##### `int getInt()`
+##### `int getInt(void)`
 Pseudo code:
 ```text
    have 'value' as an integer variable
@@ -152,7 +152,7 @@ Pseudo code:
    return the value;
 ```
 
-##### `int getDouble()`
+##### `double getDouble(void)`
 Pseudo code:
 ```text
    have 'value' as a double variable
