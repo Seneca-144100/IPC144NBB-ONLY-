@@ -8,7 +8,7 @@ void title( char fillLineWith );
 int main( void ) {
    int num = 0;
 
-   while ( !(num >= 1 && num <= 10) ) { // while the value is invalid
+   while ( num < 1 || num > 10 ) { // while the value is invalid
       printf( "How many times I should say hello?\n> " );
       scanf( "%d", &num );
 

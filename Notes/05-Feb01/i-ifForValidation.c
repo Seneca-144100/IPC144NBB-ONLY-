@@ -1,4 +1,3 @@
-
 // no warning on stdio functions
 #define  _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
@@ -6,18 +5,15 @@ void sayHello( int howManyTimes );
 void line( char charToFillTheLineWith, int length );
 void title( char fillLineWith );
 int main( void ) {
-   int num = 0;
+   int num;
+   printf( "How many times I should say hello?\n> " );
+   scanf( "%d", &num );
 
-   while ( !(num >= 1 && num <= 10) ) { // while the value is invalid
-      printf( "How many times I should say hello?\n> " );
-      scanf( "%d", &num );
-
-      if ( num >= 1 && num <= 10 ) {
-         sayHello( num );
-      }
-      else {
-         printf( "%d is an invalid value, (1<=value<=10)!\n", num );
-      }
+   if ( num >= 1 && num <= 10 ) {
+      sayHello( num );
+   }
+   else {
+      printf( "%d is an invalid value, (1<=value<=10)!\n", num );
    }
    return 0;
 }
@@ -43,25 +39,3 @@ void line( char f, int len ) {
    }
    putchar( '\n' );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
