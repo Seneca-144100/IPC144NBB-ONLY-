@@ -27,6 +27,7 @@ For Mac you must use and alternative development environment like [XCode](https:
 - [01-Jan11, Computers, programming, Visual Studio, first C code, intro to functions](https://youtu.be/6iRRXu0IuZU?si=duvAAmXsNjHB0Al2)
 - [02-Jan18, types, variables, scanf, functions with return value](https://youtu.be/UvqbhMhcBvA)
 - [04-Jan25, scanf, printf review, while loop and accumulation of values](https://youtu.be/pA08as77Hz0)
+- [05-Feb01, Review, functions, if else](https://youtu.be/MeEGGl8Kczc)
 
 
 # Office
