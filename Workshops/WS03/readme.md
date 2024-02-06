@@ -207,7 +207,7 @@ int getNoOfStudents(void) {
 }
 
 int getMark(int maximum) {
-   int mark;
+   int percentage;
    return percentage;
 }
 
