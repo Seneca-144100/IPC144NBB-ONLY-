@@ -1,0 +1,123 @@
+START: void prnGrade(char letterGrade); tester
+Characters A to F should be printed, ending with A+
+A
+B
+C
+D
+E
+F
+A+
+END: void prnGrade(char letterGrade); tester
+
+START: char grade(int markOutOf100); tester
+Starting and ending with X, 100 grades from F to A and '+' should be printed
+XFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDDCCCCCCCCCCBBBBBBBBBBAAAAAAAAAA+++++++++++X
+END: char grade(int markOutOf100); tester
+
+START: int getNoOfStudents(void); tester
+First and last lines must print errors and return zero
+Two middle lines should return 5 and 35
+>>>>>Enter 4
+Please enter the number of students
+> 4
+Minimum number of students is 5!
+Returned: ->0<-
+>>>>>Enter 5
+Please enter the number of students
+> 5
+Returned: ->5<-
+>>>>>Enter 35
+Please enter the number of students
+> 35
+Returned: ->35<-
+>>>>>Enter 36
+Please enter the number of students
+> 36
+Maximum number of students is 35!
+Returned: ->0<-
+END: int getNoOfStudents(void); tester
+
+START: int getMark(int maximumAcceptableMarkValue); tester
+>>>Enter -20
+Please print a mark between 0 and 4:
+> -20
+Invalid Mark!
+Must return -1,
+Your function returned: -1
+
+>>>Enter -1
+Please print a mark between 0 and 4:
+> -1
+Invalid Mark!
+Must return -1,
+Your function returned: -1
+
+>>>Enter 0
+Please print a mark between 0 and 4:
+> 0
+Must return 0,
+Your function returned: 0
+
+>>>Enter 1
+Please print a mark between 0 and 4:
+> 1
+Must return 25,
+Your function returned: 25
+
+>>>Enter 4
+Please print a mark between 0 and 4:
+> 4
+Must return 100,
+Your function returned: 100
+
+>>>Enter 5
+Please print a mark between 0 and 4:
+> 5
+Invalid Mark!
+Must return -1,
+Your function returned: -1
+
+END: int getMark(int maximumAcceptableMarkValue); tester
+
+Tester program!
+==================================
+Enter the following values:
+4
+5
+-1
+5
+10
+15
+17
+19
+==================================
+Please enter the number of students
+> 4
+Minimum number of students is 5!
+Please enter the number of students
+> 5
+1 1 1 1 -------
+Please print a mark between 0 and 20:
+> -1
+Invalid Mark!
+Please print a mark between 0 and 20:
+> 5
+    Mark: 25%, Grade: F
+2 2 2 2 -------
+Please print a mark between 0 and 20:
+> 10
+    Mark: 50%, Grade: D
+3 3 3 3 -------
+Please print a mark between 0 and 20:
+> 15
+    Mark: 75%, Grade: B
+4 4 4 4 -------
+Please print a mark between 0 and 20:
+> 17
+    Mark: 85%, Grade: A
+5 5 5 5 -------
+Please print a mark between 0 and 20:
+> 19
+    Mark: 95%, Grade: A+
+END Tester program!
+==================================
