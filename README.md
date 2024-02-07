@@ -24,6 +24,7 @@ For Mac you must use and alternative development environment like [XCode](https:
 
 ## Recordings of Sessions
 
+[Go to Noes for recordings](https://github.com/Seneca-144100/IPC144NBB-ONLY-/tree/main/Notes)
 
 # Office
 [![Fardad Office](images/244Office.png)](https://teams.microsoft.com/l/channel/19%3a3kkkWfYNTF241LYBO-w-XJ3CWoIGdLn_81ivSGVShek1%40thread.tacv2/General?groupId=b3d0c231-ba57-436e-90d9-6b124723bd0c&tenantId=eb34f74a-58e7-4a8b-9e59-433e4c412757)
