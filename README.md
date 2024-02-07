@@ -23,11 +23,6 @@ For Mac you must use and alternative development environment like [XCode](https:
 - [Install Windows 10 on Fusion VM](https://www.groovypost.com/howto/create-custom-virtual-machine-vmware-fusion/)
 
 ## Recordings of Sessions
-- [Jan09- Welcome!](https://youtu.be/9PmVzIEZ6Ds?si=16-gQYlAKhQBJ7Se)
-- [01-Jan11, Computers, programming, Visual Studio, first C code, intro to functions](https://youtu.be/6iRRXu0IuZU?si=duvAAmXsNjHB0Al2)
-- [02-Jan18, types, variables, scanf, functions with return value](https://youtu.be/UvqbhMhcBvA)
-- [04-Jan25, scanf, printf review, while loop and accumulation of values](https://youtu.be/pA08as77Hz0)
-- [05-Feb01, Review, functions, if else](https://youtu.be/MeEGGl8Kczc)
 
 
 # Office
