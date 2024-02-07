@@ -1,5 +1,6 @@
 # IPC144NBB Notes and Recordings
 IPC144NBB Notes discussed in class.
+### Recordings
 - [Jan09- Welcome!](https://youtu.be/9PmVzIEZ6Ds?si=16-gQYlAKhQBJ7Se)
 - [01 - Jan 11, Computers, programming, Visual Studio, first C code, intro to functions](https://youtu.be/6iRRXu0IuZU?si=duvAAmXsNjHB0Al2)
 - [02 - Jan 18, types, variables, scanf, functions with return value](https://youtu.be/UvqbhMhcBvA)
