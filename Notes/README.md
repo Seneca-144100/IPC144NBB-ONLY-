@@ -6,4 +6,5 @@ IPC144NBB Notes discussed in class.
 - [02 - Jan 18, types, variables, scanf, functions with return value](https://youtu.be/UvqbhMhcBvA)
 - [04 - Jan 25, scanf, printf review, while loop and accumulation of values](https://youtu.be/pA08as77Hz0)
 - [05 - Feb 01, Review, functions, if else](https://youtu.be/MeEGGl8Kczc)
-- [06 - Feb 06, How to start coding and successfully test and code efficiently](https://youtu.be/6i-n5IHPohY)
+- [Feb 06, How to start coding and successfully test and code efficiently](https://youtu.be/6i-n5IHPohY)
+- [06 - Feb 08, Different ways of looping and decision making, Buffered data entry](https://youtu.be/2Ln4mirJUzc)
