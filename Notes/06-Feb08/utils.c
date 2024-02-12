@@ -18,5 +18,6 @@ int getInt( ) {
 double getDbl( ) {
    double num;
    scanf( "%lf", &num );
+   flushKey();
    return num;
 }
