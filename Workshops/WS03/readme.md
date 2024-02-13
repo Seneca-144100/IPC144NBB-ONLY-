@@ -349,7 +349,8 @@ Create a file named `reflect.txt` that contains your detailed description of the
 You may be asked to talk about your reflection (as a presentation) in class.
 
 ## Submission Process:
-
+### correct output
+[correct_output.txt](DIY/correct_output.txt)
 ### Data Entry
 
 ```text
