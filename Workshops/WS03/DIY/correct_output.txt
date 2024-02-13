@@ -1,0 +1,37 @@
+Script started on Mon 12 Feb 2024 10:54:01 PM EST
+Please enter the number of students
+> -1
+Minimum number of students is 5!
+Please enter the number of students
+> 40
+Maximum number of students is 35!
+Please enter the number of students
+> 5abc
+What are the marks out of?
+> 45
+1- Please print a mark between 0 and 45:
+> -1
+Invalid Mark!
+1- Please print a mark between 0 and 45:
+> 50
+Invalid Mark!
+1- Please print a mark between 0 and 45:
+> 40
+Entered: 88%, A
+2- Please print a mark between 0 and 45:
+> 30
+Entered: 66%, C
+3- Please print a mark between 0 and 45:
+> 20
+Entered: 44%, F
+4- Please print a mark between 0 and 45:
+> 10
+Entered: 22%, F
+5- Please print a mark between 0 and 45:
+> 35
+Entered: 77%, B
+Lowest mark entered: 22
+Highest mark entered: 88
+Average of all marks: 59.4%
+
+Script done on Mon 12 Feb 2024 10:55:01 PM EST
