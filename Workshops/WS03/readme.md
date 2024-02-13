@@ -1,4 +1,4 @@
-# Workshop #3: LOGIC <br />If, Else, Validation, Functions 
+# Workshop #3: LOGIC <br />If, Else, Validation, Functions , modules and headers files
 
 
 In the process of doing your workshop 3, in the **lab** (part 1) you are to create 4 functions to be used in the DIY section to write a program.
@@ -11,15 +11,16 @@ Upon successful completion of this workshop, you will have demonstrated the abil
 - Use functions which receive and return a value
 - Perform foolproof numerical data entry
 - reuse functions 
+- create modules for related functions (including header files)
 - describe to your instructor what you have learned in completing this workshop.
 
 ## Submission Policy
 
-This workshop is divided into two coding parts and one non-coding part:
+This workshop is divided into two coding parts and one non-coding part and will be done in 2 weeks.
 
-- Part 1 (**LAB**): A step-by-step guided workshop, worth 20% of the workshop's total mark.
+- Part 1 (**WEEK 4**): A step-by-step guided workshop.
 > In this workshop we are introducing unit tests. Therefore We will start the workshop in the lab.
-- Part 2 (**DIY**): A Do It Yourself type of workshop that is much more open-ended and is worth 50% of the workshop's total mark.  
+- Part 2 (**WEEK 5**): A Do It Yourself type of workshop that is much more open-ended.  
 - *reflection*: non-coding part, to be submitted together with *DIY* part. The reflection is worth **30%** of the whole workshop's mark. If your professor deems it insufficient, you will lose 30% of your workshop mark.
 
 ## Due Dates
@@ -35,7 +36,7 @@ The Due dates depend on your section. Please choose the "-due" option of the sub
 
 ## Late penalties 
 ### Part 1 (Lab)
-The lab part is due the day after the lab. Then 10% penalty for one day and then 30% for each day after that.
+The lab part is due two days after the lab. Then 10% penalty for one day and then 30% for each day after that.
 ### Part 2 (DIY)
 You are allowed to submit your work up to 2 days after the due date with a 30% penalty for each day. After that, the submission will be closed and the mark will be zero.
 ## Citation
@@ -80,7 +81,7 @@ gcc -Wall -o ws file1.c file2.c ... <ENTER>
 Check the output, and closely compare it with the expected output. Make sure the match exactly since with submitting your work, only perfect outputs can pass the submission program.
 
 
-# LAB (20%)
+# LAB (100%) will be counted as workshop for week 4
 
 
 ## Lab files
@@ -207,7 +208,7 @@ int getNoOfStudents(void) {
 }
 
 int getMark(int maximum) {
-   int percentage;
+   int mark;
    return percentage;
 }
 
@@ -269,9 +270,75 @@ and follow the instructions.
 
 > **??Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
 
-# Part 2 DIY (50%)
+# Part 2 DIY (70%) will be counted as workshop for week 5
 
-Under construction!
+## modules
+A module is a combination of two files; a C `.c` source file with one or many functions in it and a header file `.h` with prototypes of all the functions in the source file.
+
+To start your DIY section see the DIY project in Workshop 3. You will notice that the module utils from the [06-Feb08](https://github.com/Seneca-144100/IPC144NBB-ONLY-/tree/main/Notes/06-Feb08) lecture is added to the DIY section. 
+
+Bring your `marks.c` from the lab section to the DIY section and add a header file to it to turn it into a module. Follow the guidelines lectured in class and add compilation safeguards to `mark.h` header file and then add the function prototypes of all the functions in `marks.c`.
+
+Add an additional empty module called report (`report.h` with compilation safeguards and `report.c` which includes `report.h`). You will do your major coding for the workshop here.
+
+## coding
+### marks.c
+- include `utils.h`
+- hack your marks.c functions which use `scanf` and replace all the `scanf`s with the corresponding `get...()` functions.
+> Hacking: to get an already existing code and modify it to make it better or change it to serve your purpose
+
+### report.c
+Using the functions implemented in the `utils` and `marks` modules, implement at least one function called `report` in the report module:
+```c
+void report(int numberOfStudents);
+```
+The report functions receive a series of student marks from the console (user) and print back the percentage and grade representation of the mark. The data entry should be foolproof (i.e. if the user enters mark values out of range, the program should ask for the number again after showing an error message).
+
+After each entry, the function should keep track of the lowest and the highest mark entered. At the end, it should print a report on what the lowest and highest marks are and also what is the average of all marks with 1 digit after the decimal point. 
+
+The following is an example of the function's execution if the number of Students passed to the function is `5` and assuming the user did not make any mistake.
+
+```text
+What are the marks out of?
+> 40
+1- Please print a mark between 0 and 40:
+> 40
+Entered: 100%, A+
+2- Please print a mark between 0 and 40:
+> 30
+Entered: 75%, B
+3- Please print a mark between 0 and 40:
+> 20
+Entered: 50%, D
+4- Please print a mark between 0 and 40:
+> 10
+Entered: 25%, F
+5- Please print a mark between 0 and 40:
+> 35
+Entered: 87%, A
+Lowest mark entered: 25
+Highest mark entered: 100
+Average of all marks: 67.4%
+``` 
+
+If an invalid mark is entered, the data entry row (the loop index) should not increase, forcing the user to enter a correct value (look at the first two entries):
+
+```text
+1- Please print a mark between 0 and 45:
+> -1
+Invalid Mark!
+1- Please print a mark between 0 and 45:
+> 50
+Invalid Mark!
+1- Please print a mark between 0 and 45:
+> 40
+2- Please print a mark between 0 and 40:
+> 30
+Entered: 75%, B
+3- Please print a mark between 0 and 40:
+> 20
+```
+
 
 ## Reflection (30%)
 
@@ -285,11 +352,28 @@ You may be asked to talk about your reflection (as a presentation) in class.
 
 ### Data Entry
 
-Follow the instructions during submission
+```text
+-1
+40
+5abc
+45
+-1
+50
+40
+30
+20
+10
+35
+```
 
 ### Files to Submit
 ```text
 marks.c
+marks.h
+utils.c
+utils.h
+report.c
+report.h
 main.c
 ```
 ### Submission 
