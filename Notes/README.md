@@ -8,3 +8,4 @@ IPC144NBB Notes discussed in class.
 - [05 - Feb 01, Review, functions, if else](https://youtu.be/MeEGGl8Kczc)
 - [Feb 06, How to start coding and successfully test and code efficiently](https://youtu.be/6i-n5IHPohY)
 - [06 - Feb 08, Different ways of looping and decision making, Buffered data entry](https://youtu.be/2Ln4mirJUzc)
+- [07 - Feb 15, Arrays and Strings](https://youtu.be/kAAHWsncn28)
