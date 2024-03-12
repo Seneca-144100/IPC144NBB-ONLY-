@@ -3,19 +3,21 @@
 #include "utils.h"
 
 int main( void ) {
-   int a[5] = { 3,5,3,5,8 };
+   int a[5] = { 3,5,3,5,8};
    int i = 0;
 
    for ( i = 0; i < 5; i++ ) {
-      printf( "%d ", a[i] );
+      if ( i != 0 ) {
+         putchar( ',' );
+      }
+      printf( "%d", a[i] );
    }
-
    nl( );
 
    printf( "Enter 5 integers:\n" );
-   for ( i = 0; i < 5; i++ ) {
+   for (i=0; i < 5; i++ ) {
       printf( "%d: ", i );
-      //      a[i] = getInt( );
+//      a[i] = getInt( );
       scanf( "%d", &a[i] );
    }
    for ( i--; i >= 0; i-- ) {
