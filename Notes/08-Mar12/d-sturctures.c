@@ -47,18 +47,14 @@ struct Item readItem( void ) {
    printf( "Item name\n> " );
    // scanf( "%[^X]" , cstring); X is the character to stop at
    scanf( "%[^\n]", toRead.name );
-   flushKey( );
    printf( "SKU\n> " );
    scanf( "%d", &toRead.sku);
-   flushKey( );
    printf( "Price\n> " );
    scanf( "%lf", &toRead.price);
-   flushKey( );
    printf( "Quantity\n> " );
    scanf( "%d", &toRead.qty );
-   flushKey( );
    printf( "--------------------------------\n" );
-
+   flushKey( );
    return toRead;
 }
 
