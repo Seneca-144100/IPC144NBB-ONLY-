@@ -12,21 +12,23 @@ void nl( void ) {
 
 int getInt( ) {
    int num;
-   while ( scanf( "%d", &num ) != 1 ) {
+   char newline = ' ';
+   while ( scanf( "%d%c", &num, &newline ) != 2 
+                              || newline != '\n' ) {
       flushKey( );
       printf( "Bad integer, try again\n> " );
    }
-   flushKey( );
    return num;
 }
 
 double getDbl( ) {
    double num;
-   while ( scanf( "%lf", &num ) != 1 ) {
+   char newline = ' ';
+   while ( scanf( "%lf%c", &num, &newline ) != 2 ||
+      newline != '\n' ) {
       flushKey( );
       printf( "Bad real number, try again\n> " );
    }
-   flushKey( );
    return num;
 }
 
