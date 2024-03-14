@@ -17,7 +17,7 @@ void readInts( int array[], int size ) {
    printf( "Enter %d integers:\n", size );
    for ( i = 0; i < 5; i++ ) {
       printf( "%d: ", i + 1 );
-      //      array[i] = getInt( );
+      //      a[i] = getInt( );
       scanf( "%d", &array[i] );
    }
 }

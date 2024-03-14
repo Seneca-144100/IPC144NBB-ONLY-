@@ -1,14 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "utils.h"
-#define MAX_NO_OF_PRODUCTS 100
-
 void prnItems(const int sku[],const double price[],const int qty[], int num) {
    int i;
    double totalPrice = 0;
    printf( "SKU   Quantity  price\n"
            "-----+--------+---------\n" );
-   for ( i = 0; i < num && i< MAX_NO_OF_PRODUCTS; i++ ) {
+   for ( i = 0; i < num; i++ ) {
       printf( "%-5d|%7d |%9.2lf\n", sku[i], qty[i], price[i] );
       totalPrice += price[i] * qty[i];
    }
@@ -18,7 +16,7 @@ void prnItems(const int sku[],const double price[],const int qty[], int num) {
 void readItems( int sku[], double price[], int qty[], int num ) {
    int i;
    printf( "Enter %d Item information:\n", num );
-   for ( i = 0; i < num && i < MAX_NO_OF_PRODUCTS; i++ ) {
+   for ( i = 0; i < num; i++ ) {
       printf( "Enter Item number %d:\n", i + 1 );
       printf( "SKU\n> " );
       scanf( "%d", &sku[i] );
@@ -31,10 +29,10 @@ void readItems( int sku[], double price[], int qty[], int num ) {
 }
 
 int main( void ) {
-   int sku[MAX_NO_OF_PRODUCTS] = { 0 };
-   double price[MAX_NO_OF_PRODUCTS] = { 0.0 };
-   int qty[MAX_NO_OF_PRODUCTS] = { 0 };
+   int sku[500] = { 0 };
+   double price[500] = { 0.0 };
+   int qty[500] = { 0 };
    readItems( sku, price, qty, 2 );
-   prnItems( sku, price, qty, 2 );
+   prnItems( sku, price, qty, 20 );
    return 0;
 }
