@@ -1,0 +1,28 @@
+Enter number of the student records
+> 3
+Enter 3 student records:
+Enter Student Information # 1:
+Student Number
+> 123123
+Mark
+> 66.6
+----------------------
+Enter Student Information # 2:
+Student Number
+> 234234
+Mark
+> 55.5
+----------------------
+Enter Student Information # 3:
+Student Number
+> 345345
+Mark
+> 99.9
+----------------------
+student number   mark
+---------------+------
+123123         |  66.6
+234234         |  55.5
+345345         |  99.9
+---------------+------
+       Average:   74.0
