@@ -187,7 +187,17 @@ John Doe                      | 123123         |  66.0
 
 #### `void printReport(const struct Student S[], int num);`
 
-`printReport` lists the students' information and the average mark of the class at the end.
+`printReport` lists the students' information and the average mark of the class at the end as follows.
+
+```text
+Name                           student number   mark
+------------------------------+----------------+------
+Jimbo Jones                   | 123123         |  55.5
+Nelson Muntz                  | 234234         |  33.3
+Bart Simpson                  | 456456         |  88.8
+------------------------------+----------------+------
+                                       Average:   59.2
+```
 
 > see the [correct_output.txt](lab/correct_output.txt) for the format of the printout
 
