@@ -1,3 +1,16 @@
+// IPC Workshop 4: tester program
+//
+// File  main.c
+// Version 1.0
+// Author  Fardad Soleimanloo
+//
+// This file may be replaced by another tester program during the submission
+//
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+//
+/////////////////////////////////////////////////////////////////
 #include <stdio.h>
 #include "utils.h"
 #include "report.h"
