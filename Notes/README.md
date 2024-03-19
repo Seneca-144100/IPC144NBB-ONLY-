@@ -9,3 +9,6 @@ IPC144NBB Notes discussed in class.
 - [Feb 06, How to start coding and successfully test and code efficiently](https://youtu.be/6i-n5IHPohY)
 - [06 - Feb 08, Different ways of looping and decision making, Buffered data entry](https://youtu.be/2Ln4mirJUzc)
 - [07 - Feb 15, Arrays and Strings](https://youtu.be/kAAHWsncn28)
+- [08 - Mar 12, Array and Parallel Arrays](https://youtu.be/hkyBPOaC-8g?si=CZ4R_3PK_ZS3f2yD)
+- [09 - Mar 14, Structures](https://youtu.be/hkyBPOaC-8g?si=CZ4R_3PK_ZS3f2yD)
+- 
