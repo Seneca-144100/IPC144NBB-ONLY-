@@ -159,7 +159,7 @@ Student Number
 Bad integer, try again
 > 123 and 123<ENTER>
 Bad integer, try again
-> 123123<ENTER>
+> 123123<space><ENTER>
 Bad integer, try again
 > 123123<ENTER>
 Mark
