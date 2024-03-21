@@ -1,0 +1,46 @@
+Enter number of the student records
+> 3
+Enter 3 student records:
+Enter Student Information # 1:
+Name
+> Jimbo Jones
+Student Number
+> 123123
+Mark
+> 55.5
+----------------------
+Enter Student Information # 2:
+Name
+> Nelson Muntz
+Student Number
+> 234234
+Mark
+> 33.3
+----------------------
+Enter Student Information # 3:
+Name
+> Bart Simpson
+Student Number
+> abc
+Bad integer, try again
+> 123abc
+Bad integer, try again
+> 123
+Bad integer, try again
+> 456456
+Mark
+> abc
+Bad real number, try again
+> 88.8abc
+Bad real number, try again
+> 88.8
+Bad real number, try again
+> 88.8
+----------------------
+Name                           student number   mark
+------------------------------+----------------+------
+Jimbo Jones                   | 123123         |  55.5
+Nelson Muntz                  | 234234         |  33.3
+Bart Simpson                  | 456456         |  88.8
+------------------------------+----------------+------
+                                       Average:   59.2

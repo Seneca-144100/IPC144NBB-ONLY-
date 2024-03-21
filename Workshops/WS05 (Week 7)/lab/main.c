@@ -1,4 +1,4 @@
-// IPC Workshop 4: tester program
+// IPC Workshop 5: tester program
 //
 // File  main.c
 // Version 1.0
@@ -16,12 +16,11 @@
 #include "report.h"
 
 int main(void) {
-   int stdno[100] = { 0 };
-   float mark[100] = { 0.0 };
+   struct Student std[100];
    int num;
    printf("Enter number of the student records\n> ");
    num = getInt();
-   readStudentInfo(stdno, mark, num);
-   printReport(stdno, mark, num);
+   readStudentInfo(std, num);
+   printReport(std, num);
    return 0;
 }
