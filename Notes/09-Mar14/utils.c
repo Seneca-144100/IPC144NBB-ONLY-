@@ -2,6 +2,22 @@
 #include <stdio.h>
 #include "utils.h"
 
+/* string handling functions: */
+
+void strCpy( char des[], const char src[] ) {
+   int i ;
+ //  for ( i = 0; src[i] != NULL; i++ ) {
+   for ( i = 0; src[i]; i++ ) {
+         des[i] = src[i];
+   }
+   des[i] = 0;
+}
+
+
+
+
+
+
 void flushKey( void ) {
    while ( getchar( ) != '\n' );
 }

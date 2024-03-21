@@ -2,6 +2,20 @@
 #ifndef SENECA_UTILS_H
 #define SENECA_UTILS_H
 
+
+void strCpy( char des[], const char src[] );
+
+/// <summary>
+/// left &lt; right returns negative value
+/// left == right returns 0
+/// left &gt; right returns positive value
+/// </summary>
+/// <param name="left"> string to compare</param>
+/// <param name="right"> string to compare</param>
+/// <returns> see summery </returns>
+int strCmp( const char left[], const char right[] );
+
+
 int getInt( );
 double getDbl( );
 void flushKey( void );
