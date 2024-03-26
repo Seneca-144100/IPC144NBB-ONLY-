@@ -159,7 +159,7 @@ Student Number
 Bad integer, try again
 > 123 and 123<ENTER>
 Bad integer, try again
-> 123123<ENTER>
+> 123123<space><ENTER>
 Bad integer, try again
 > 123123<ENTER>
 Mark
@@ -187,7 +187,17 @@ John Doe                      | 123123         |  66.0
 
 #### `void printReport(const struct Student S[], int num);`
 
-`printReport` lists the students' information and the average mark of the class at the end.
+`printReport` lists the students' information and the average mark of the class at the end as follows.
+
+```text
+Name                           student number   mark
+------------------------------+----------------+------
+Jimbo Jones                   | 123123         |  55.5
+Nelson Muntz                  | 234234         |  33.3
+Bart Simpson                  | 456456         |  88.8
+------------------------------+----------------+------
+                                       Average:   59.2
+```
 
 > see the [correct_output.txt](lab/correct_output.txt) for the format of the printout
 
@@ -215,8 +225,9 @@ John Doe                      | 123123         |  66.0
 
 
 ### Reflection
+First, explain what a C-string is, and then explain what is the difference between a C-string and a character array in C language.
 
-Study your final solutions for each deliverable of the workshop, reread the related parts of the course notes, and make sure that you have understood the concepts covered by this workshop.  **This should take no less than 30 minutes of your time and the result is suggested to be at least 150 words in length.**
+Then Study your final solutions for each deliverable of the workshop, reread the related parts of the course notes, and make sure that you have understood the concepts covered by this workshop.  **This should take no less than 30 minutes of your time and the result is suggested to be at least 150 words in length.**
 
 Create a file named `reflect.txt` that contains your detailed description of the topics that you have learned in completing this workshop and mention any issues that caused you difficulty.
 

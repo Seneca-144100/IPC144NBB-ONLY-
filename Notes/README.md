@@ -11,4 +11,5 @@ IPC144NBB Notes discussed in class.
 - [07 - Feb 15, Arrays and Strings](https://youtu.be/kAAHWsncn28)
 - [08 - Mar 12, Array and Parallel Arrays](https://youtu.be/hkyBPOaC-8g?si=CZ4R_3PK_ZS3f2yD)
 - [09 - Mar 14, Structures](https://youtu.be/hkyBPOaC-8g?si=CZ4R_3PK_ZS3f2yD)
-- 
+- [10 - Mar 19, Pointers](https://youtu.be/dbJBnUAJMLQ)
+
