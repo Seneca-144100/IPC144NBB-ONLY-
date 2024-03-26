@@ -1,0 +1,46 @@
+Note: This output is only a sample for debugging purposes; the tester 
+      output may have different values
+
+=============v
+Name:        Honeydew Melon
+Sku:         3695
+Price:       5.99
+Price + tax: N/A
+Stock Qty:   20
+=============^
+=============v
+Name:        Jack's Apple Juice
+Sku:         1679
+Price:       1.50
+Price + tax: N/A
+Stock Qty:   80
+=============^
+=============v
+Name:        Joe's Organic Potato Chips
+Sku:         6539
+Price:       3.29
+Price + tax: 3.72
+Stock Qty:   15
+=============^
+=============v
+Name:        Kiwifruit
+Sku:         9462
+Price:       0.50
+Price + tax: N/A
+Stock Qty:   123
+=============^
+=============v
+Name:        Lays Chips S&V
+Sku:         4297
+Price:       3.69
+Price + tax: 4.17
+Stock Qty:   1
+=============^
+=============v
+Name:        Milk
+Sku:         1234
+Price:       3.99
+Price + tax: N/A
+Stock Qty:   1
+=============^
+total: 19.87

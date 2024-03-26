@@ -1,0 +1,11 @@
+Note: This output is only a sample for debugging purposes; the tester 
+      output may have different values
+
+  Name                Price  taxed
+| Honeydew Melon|      5.99 |     |
+| Jack's Apple J|      1.50 |     |
+| Joe's Organic |      3.72 | Yes |
+| Kiwifruit     |      0.50 |     |
+| Lays Chips S&V|      4.17 | Yes |
+| Milk          |      3.99 |     |
+total: 19.87
