@@ -1,6 +1,6 @@
 # Project: Simple Point Of Sale System
 
-Version: V1.1 (Corrected MS4 test input value)
+Version: [V1.1](#v11) (Corrected MS4 test input value)
 
 ### Milestones
 
@@ -12,9 +12,9 @@ Version: V1.1 (Corrected MS4 test input value)
 | Deliverable 1: | [MS31](#ms31--void-saveitemsconst-char-filename) |   |  |   | `==.` |
 | Deliverable 2: | [MS32](#ms32-double-billdisplayconst-struct-item-item) |   |  |   | `=-` |
 | Deliverable 3: | [MS33](#ms33-void-displayconst-struct-item-item) |   |  |   | `==-` |
-| Deliverable 4: | [MS34](#ms34-int-searchvoid) | V1.1  | corrected test input |  | `==-` |
+| Deliverable 4: | [MS34](#ms34-int-searchvoid) | |  |  | `==-` |
 | Deliverable 5: | [MS35](#ms35-void-posvoid) |   |  |   | `====-` |
-| [MS4](#milestone-4-stock-item) |  |  |  | Stock Item | `===-` |
+| [MS4](#milestone-4-stock-item) |  | [V1.1](#v11) | corrected test input | Stock Item | `===-` |
 | [MS5](#milestone-5-add-and-remove) |  |  |  | Add and Remove Items | `======` |
 
 
