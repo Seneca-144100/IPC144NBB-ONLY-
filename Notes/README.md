@@ -12,4 +12,6 @@ IPC144NBB Notes discussed in class.
 - [08 - Mar 12, Array and Parallel Arrays](https://youtu.be/hkyBPOaC-8g?si=CZ4R_3PK_ZS3f2yD)
 - [09 - Mar 14, Structures](https://youtu.be/hkyBPOaC-8g?si=CZ4R_3PK_ZS3f2yD)
 - [10 - Mar 19, Pointers](https://youtu.be/dbJBnUAJMLQ)
-
+- [11 - Mar 21, Pointers, structures, functions and files intro](https://youtu.be/GY81Mf9s7Ik)
+- [12 - Mar 26, Files completed and pointers, function and structures review](https://youtu.be/AZsj0Vp4UcQ)
+- [13 - Mar 28, C-strings and standard menu logic](https://youtu.be/SQPIG2LDfb4)
