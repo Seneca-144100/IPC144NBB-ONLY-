@@ -32,12 +32,8 @@ void strnCpy( char des[], const char src[], int len ) {
 
 int strCmp( const char left[], const char right[] ) {
    int i;
-   int done = 0;
-   for ( i = 0; !done && left[i] && right[i]; i++ ) {
-      if ( left[i] != right[i] ) {
-         done = 1;
-      }
-   }
+  
+   for ( i = 0; left[i] != right[i] && left[i] && right[i]; i++ );
    return left[i] - right[i];
 }
 
