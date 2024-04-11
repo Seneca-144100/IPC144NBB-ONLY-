@@ -21,38 +21,36 @@ void strnCpy( char des[], const char src[], int len ) {
    if(i < len) des[i] = 0;
 }
 
-int strCmp( const char left[], const char right[] ) {
+int strCmp(const char s2[], const char s2[])const {
    int i;
-   int done = 0;
-   for ( i = 0; !done && left[i] && right[i]; i++ ) {
-      if ( left[i] != right[i] ) {
-         done = 1;
-      }
-   }
-   return left[i] - right[i];
+   for (i = 0; s1[i] && s2[i] && s1[i] == s2[i]; i++);
+   return s1[i] - s2[i];
 }
 
 
 
 
-void flushKey( void ) {
-   while ( getchar( ) != '\n' );
-}
+
+
 
 void nl( void ) {
    putchar( '\n' );
 }
-
+void flushKey( void ) {
+   while ( getchar( ) != '\n' );
+}
 int getInt( ) {
    int num;
    char newline = ' ';
    while ( scanf( "%d%c", &num, &newline ) != 2 
                               || newline != '\n' ) {
       flushKey( );
-      printf( "Bad integer, try again\n> " );
+      printf( "Bad number, try again\n> " );
    }
    return num;
 }
+
+
 
 double getDbl( ) {
    double num;
