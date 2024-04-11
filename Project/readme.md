@@ -1,5 +1,6 @@
 # Project: Simple Point Of Sale System
 
+Version: [V1.1](#v11) (Corrected MS4 test input value)
 
 ### Milestones
 
@@ -11,9 +12,9 @@
 | Deliverable 1: | [MS31](#ms31--void-saveitemsconst-char-filename) |   |  |   | `==.` |
 | Deliverable 2: | [MS32](#ms32-double-billdisplayconst-struct-item-item) |   |  |   | `=-` |
 | Deliverable 3: | [MS33](#ms33-void-displayconst-struct-item-item) |   |  |   | `==-` |
-| Deliverable 4: | [MS34](#ms34-int-searchvoid) |   |  |  | `==-` |
+| Deliverable 4: | [MS34](#ms34-int-searchvoid) | |  |  | `==-` |
 | Deliverable 5: | [MS35](#ms35-void-posvoid) |   |  |   | `====-` |
-| [MS4](#milestone-4-stock-item) |  |  |  | Stock Item | `===-` |
+| [MS4](#milestone-4-stock-item) |  | [V1.1](#v11) | corrected test input | Stock Item | `===-` |
 | [MS5](#milestone-5-add-and-remove) |  |  |  | Add and Remove Items | `======` |
 
 
@@ -854,6 +855,8 @@ If you like some suggestions for implementation, here they are:
 
 
 ## MS4 Submission 
+### V1.1 
+added 1 to list the inventory before exitin
 ### data entry
 ```text
 4
@@ -865,10 +868,11 @@ abc
 0
 620
 200
+1
 0
 ```
 
-### MS4 Submission proccess
+### MS4 Submission process
 
 Upload your source code and the tester program to your `matrix` account. Compile and run your code using the `gcc` compiler [as shown in the introduction](#compiling-and-testing-your-program) and make sure that everything works properly.
 
